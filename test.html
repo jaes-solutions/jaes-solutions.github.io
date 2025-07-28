@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JAES Cursor Magic</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 200vh;
+      background: white;
+      color: black;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+
+    /* Custom cursor glow */
+    .cursor {
+      width: 30px;
+      height: 30px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3), 0 0 60px rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+      transition: transform 0.2s ease-out;
+      z-index: 9999;
+      backdrop-filter: blur(4px);
+      mix-blend-mode: difference;
+    }
+
+    .aim-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 10000;
+      display: none;
+    }
+
+    .aim-overlay::before,
+    .aim-overlay::after {
+      content: "";
+      position: absolute;
+      background: red;
+    }
+
+    .aim-overlay::before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: translateY(-1px);
+    }
+
+    .aim-overlay::after {
+      left: 50%;
+      top: 0;
+      width: 2px;
+      height: 100%;
+      transform: translateX(-1px);
+    }
+
+    .custom-crosshair {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 10001;
+      display: none;
+    }
+
+    .custom-crosshair::before,
+    .custom-crosshair::after {
+      content: '';
+      position: absolute;
+      background-color: black;
+      z-index: 10001;
+    }
+
+    .custom-crosshair::before {
+      width: 30px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .custom-crosshair::after {
+      width: 2px;
+      height: 30px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to JAES Magic ✨</h1>
+  <p style="text-align:center; font-size:1.2rem; padding: 50vh 1rem;">
+    Scroll down to see more magic!
+  </p>
+  <section id="shootSection" style="height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <button id="shootBtn" style="font-size: 2rem; padding: 1rem 2rem; cursor: crosshair;">Shoot Me</button>
+  </section>
+  <div class="cursor" id="cursor"></div>
+  <div class="aim-overlay" id="aimOverlay"></div>
+  <div class="custom-crosshair" id="customCrosshair"></div>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+      cursorX += (mouseX - cursorX) * 0.1;
+      cursorY += (mouseY - cursorY) * 0.1;
+      cursor.style.top = `${cursorY}px`;
+      cursor.style.left = `${cursorX}px`;
+      requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+
+    const shootBtn = document.getElementById('shootBtn');
+    const aimOverlay = document.getElementById('aimOverlay');
+    const customCrosshair = document.getElementById('customCrosshair');
+
+    shootBtn.addEventListener('click', () => {
+      const rect = shootBtn.getBoundingClientRect();
+      const isAimed =
+        mouseX >= rect.left &&
+        mouseX <= rect.right &&
+        mouseY >= rect.top &&
+        mouseY <= rect.bottom;
+
+      customCrosshair.style.display = 'block';
+      aimOverlay.style.display = 'block';
+
+      setTimeout(() => {
+        aimOverlay.style.display = 'none';
+        customCrosshair.style.display = 'none';
+
+        if (isAimed) {
+          shootBtn.innerText = "🎯 Hit!";
+          shootBtn.style.background = "limegreen";
+        } else {
+          alert('❌ Missed! Try again.');
+        }
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>

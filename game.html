@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crosshair Effect</title>
+  <style>
+   
+    #cont {
+      position: relative;
+      height: 800px;
+      background-color: black;
+    }
+    .cursor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 10000;
+    }
+    .line-horizontal,
+    .line-vertical {
+      position: absolute;
+      background: white;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .line-horizontal {
+      width: 100%;
+      height: 1px;
+      transform: translateY(50%);
+    }
+    .line-vertical {
+      height: 100%;
+      width: 1px;
+      transform: translateX(50%);
+    }
+
+    #crosshair-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 62px;
+      color: white;
+      font-family: sans-serif;
+      pointer-events: none;
+      z-index: 10001;
+      transition: 0.3s ease;
+    }
+
+    #hover-target {
+      pointer-events: auto;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="cont"></div>
+  <div id="crosshair-text"><span id="hover-target">Aim...</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    const container = document.getElementById('cont');
+
+    const cursor = document.createElement('div');
+    cursor.className = 'cursor';
+
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
+    svg.style.position = 'absolute';
+    svg.style.top = 0;
+    svg.style.left = 0;
+
+    const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+    const filterX = document.createElementNS('http://www.w3.org/2000/svg', 'filter');
+    filterX.setAttribute('id', 'filter-noise-x');
+    const turbulenceX = document.createElementNS('http://www.w3.org/2000/svg', 'feTurbulence');
+    turbulenceX.setAttribute('type', 'fractalNoise');
+    turbulenceX.setAttribute('baseFrequency', '0.000001');
+    turbulenceX.setAttribute('numOctaves', '1');
+    const dispX = document.createElementNS('http://www.w3.org/2000/svg', 'feDisplacementMap');
+    dispX.setAttribute('in', 'SourceGraphic');
+    dispX.setAttribute('scale', '40');
+    filterX.appendChild(turbulenceX);
+    filterX.appendChild(dispX);
+
+    const filterY = filterX.cloneNode(true);
+    filterY.setAttribute('id', 'filter-noise-y');
+
+    defs.appendChild(filterX);
+    defs.appendChild(filterY);
+    svg.appendChild(defs);
+
+    const hLine = document.createElement('div');
+    hLine.className = 'line-horizontal';
+    const vLine = document.createElement('div');
+    vLine.className = 'line-vertical';
+
+    cursor.appendChild(svg);
+    cursor.appendChild(hLine);
+    cursor.appendChild(vLine);
+    container.appendChild(cursor);
+
+    let mouse = { x: 0, y: 0 };
+
+    const getMousePos = (e, container) => {
+      const bounds = container.getBoundingClientRect();
+      return {
+        x: e.clientX - bounds.left,
+        y: e.clientY - bounds.top,
+      };
+    };
+
+    const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+    const renderedStyles = {
+      tx: { previous: 0, current: 0, amt: 0.15 },
+      ty: { previous: 0, current: 0, amt: 0.15 },
+    };
+
+    const primitiveValues = { turbulence: 0 };
+
+    const tl = gsap.timeline({
+      paused: true,
+      onStart: () => {
+        hLine.style.filter = 'url(#filter-noise-x)';
+        vLine.style.filter = 'url(#filter-noise-y)';
+      },
+      onUpdate: () => {
+        turbulenceX.setAttribute('baseFrequency', primitiveValues.turbulence);
+        turbulenceY.setAttribute('baseFrequency', primitiveValues.turbulence);
+      },
+      onComplete: () => {
+        hLine.style.filter = 'none';
+        vLine.style.filter = 'none';
+      },
+    }).to(primitiveValues, {
+      duration: 0.5,
+      ease: 'power1',
+      startAt: { turbulence: 1 },
+      turbulence: 0,
+    });
+
+    const crosshairText = document.getElementById('crosshair-text');
+    const hoverTarget = document.getElementById('hover-target');
+    console.log('Hover target:', hoverTarget);
+
+    let messageIndex = 0;
+
+    const render = () => {
+      renderedStyles.tx.current = mouse.x;
+      renderedStyles.ty.current = mouse.y;
+      for (let key in renderedStyles) {
+        const style = renderedStyles[key];
+        style.previous = lerp(style.previous, style.current, style.amt);
+      }
+      gsap.set(vLine, { x: renderedStyles.tx.previous });
+      gsap.set(hLine, { y: renderedStyles.ty.previous });
+      requestAnimationFrame(render);
+    };
+
+    // Track mouse position and show crosshair lines
+    container.addEventListener('mousemove', (e) => {
+      mouse = getMousePos(e, container);
+      gsap.to([hLine, vLine], { opacity: 1, duration: 0.9, ease: 'power3.out' });
+    });
+
+    if (hoverTarget) {
+      hoverTarget.addEventListener('mouseenter', () => {
+        tl.restart();
+        hoverTarget.textContent = 'Shoot!';
+      });
+
+    hoverTarget.addEventListener('mouseleave', () => {
+      tl.progress(1).kill();
+      hoverTarget.textContent = 'Aim.. and..';
+    });
+
+    hoverTarget.addEventListener('click', () => {
+      window.location.href = 'contact.html'; // Replace with your desired URL or path
+    });
+
+    container.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target !== hoverTarget) {
+        const messages = [
+          'Haha, you missed!',
+'You can’t shoot, can you?',
+'Try again, sharpshooter!',
+'That’s not even close!',
+'Keep practicing!',
+'You missed by a mile!',
+'Aim better next time!',
+'Was that even a shot?',
+'Your aim needs a GPS!',
+'Are you even trying?',
+'Maybe glasses would help!',
+'Legend says that shot is still flying...',
+'That was adorable!',
+'Good effort... not!',
+'Shooting air, are we?',
+'Were you aiming at the sky?',
+'Try moving your hand, not your hopes!',
+'I’ve seen better aim from a potato!',
+'That’s one way to miss everything!',
+'Nice try... not!',
+  'Was that even a shot?',
+  'You call that aim?',
+  'Missed!',
+  'So close! (Not really)',
+  'Epic miss, my friend.',
+  'Nope!',
+  'Oof!',
+  'Swing and miss!',
+  'Still warming up?',
+  'You blinked, right?',
+  'That was wild...',
+  'Try harder!',
+  'Try using both eyes!',
+  'Your aim is on vacation.',
+  'Classic misfire!',
+  'Where were you aiming?',
+  'You hit... nothing!',
+  'Need a map to aim?',
+  'You almost hit the air!',
+  'Oopsie daisy!',
+  'Practice makes... well, try again.',
+  'Let’s pretend that didn’t happen.',
+  'Reload your skills!',
+  'Cursor gave up.',
+  
+  'Wrong way!',
+  'Shoot again!',
+  'You good?',
+  'Seriously?',
+  'Bruh...',
+  'Yikes!',
+  'Sad shot.'
+        ];
+        const currentMessage = messages[messageIndex];
+        messageIndex = (messageIndex + 1) % messages.length;
+
+        const msgEl = document.createElement('div');
+        msgEl.textContent = currentMessage;
+        msgEl.style.position = 'absolute';
+        msgEl.style.left = `${e.clientX}px`;
+        msgEl.style.top = `${e.clientY}px`;
+        msgEl.style.transform = 'translate(-50%, -50%)';
+        msgEl.style.color = 'white';
+        msgEl.style.fontSize = '20px';
+        msgEl.style.fontFamily = 'sans-serif';
+        msgEl.style.pointerEvents = 'none';
+        msgEl.style.zIndex = '10002';
+        msgEl.style.opacity = '0';
+        msgEl.style.transition = 'opacity 1.5s ease';
+        container.appendChild(msgEl);
+
+        // Trigger fade-in
+        requestAnimationFrame(() => {
+          msgEl.style.opacity = '1';
+        });
+
+        // Trigger fade-out after 3.5 seconds
+        setTimeout(() => {
+          msgEl.style.opacity = '0';
+        }, 1200);
+
+        // Remove after fade-out completes (1.5s transition, so after 5s total)
+        setTimeout(() => {
+          msgEl.remove();
+        }, 2000);
+      }
+    });
+    }
+
+    requestAnimationFrame(render);
+  </script>
+</body>
+</html>

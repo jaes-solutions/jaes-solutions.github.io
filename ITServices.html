@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      IT Services | Managed Support, Cybersecurity & Consulting | JAES Solutions
+    </title>
+    <link rel="stylesheet" href="itservices.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="JAES Solutions provides professional IT services including managed IT support, consulting, cybersecurity, data backup, and network solutions to help your business thrive."
+    />
+    <meta
+      name="keywords"
+      content="Managed IT Support, IT Services, Cybersecurity Solutions, Data Backup, IT Consulting, Network Management, JAES IT Services, Business IT Support, IT Infrastructure, Secure IT Services"
+    />
+    <meta name="author" content="JAES Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="IT Services | JAES Solutions" />
+    <meta
+      property="og:description"
+      content="Reliable and scalable IT services tailored for your business. From cybersecurity to data recovery, JAES Solutions ensures your tech runs smoothly."
+    />
+    <meta
+      property="og:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+    <meta
+      property="og:url"
+      content="https://jaessolutions.com/ITServices.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IT Services | JAES Solutions" />
+    <meta
+      name="twitter:description"
+      content="Explore our IT services – managed support, security, data backup and more. Trust JAES Solutions for your business technology needs."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      // Load navbar.html into the #navbar-placeholder div
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+
+            // Now safe to access elements from navbar.html
+            document
+              .querySelector(".nav-ser")
+              ?.addEventListener("mouseover", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.remove("hidden");
+              });
+
+            document
+              .querySelector(".nav-item")
+              ?.addEventListener("mouseleave", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.add("hidden");
+              });
+
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+              if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+              } else {
+                navbar.classList.remove("scrolled");
+              }
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading navbar:", error);
+          });
+      });
+      //footer
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => console.error("Footer load error:", error));
+      });
+
+      // Get the navbar element
+      const navbar = document.getElementById("navbar");
+
+      // Listen for the scroll event
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Change 50 to the scroll position where you want the color change
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+    <div class="full-screen-image"></div>
+
+    <div class="container">
+      <div class="box box1">
+        <div class="box-inner">
+          <div class="box-front">Managed IT support</div>
+          <div class="box-back">
+            Comprehensive management of your IT infrastructure, including
+            proactive monitoring, troubleshooting, and user support to keep your
+            business running smoothly.
+          </div>
+        </div>
+      </div>
+      <div class="box box2">
+        <div class="box-inner">
+          <div class="box-front">IT consulting</div>
+          <div class="box-back">
+            Expert advice and strategic planning to align your technology with
+            business goals, optimize processes, and implement the best IT
+            solutions for your organization.
+          </div>
+        </div>
+      </div>
+      <div class="box box3">
+        <div class="box-inner">
+          <div class="box-front">Network and cybersecurity<br />solutions</div>
+          <div class="box-back">
+            Design, implementation, and maintenance of secure networks,
+            including firewalls, threat detection, and cybersecurity protocols
+            to protect your data and systems.
+          </div>
+        </div>
+      </div>
+      <div class="box box4">
+        <div class="box-inner">
+          <div class="box-front">Data backup and recovery</div>
+          <div class="box-back">
+            Reliable backup solutions and disaster recovery planning to ensure
+            your critical business data is protected and quickly recoverable in
+            case of data loss or emergencies.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Observe when the boxes come into view
+      document.addEventListener("DOMContentLoaded", function () {
+        const boxes = document.querySelectorAll(".box");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        boxes.forEach((box) => observer.observe(box));
+      });
+    </script>
+    <div id="footer-placeholder"></div>
+  </body>
+</html>

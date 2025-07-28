@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | Complete IT, App & Hardware Solutions | JAES Solutions</title>
+  <link rel="stylesheet" href="services.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="description" content="Discover the full range of services offered by JAES Solutions, including IT applications, mobile and web app development, IT support, and hardware solutions.">
+  <meta name="keywords" content="JAES Services, IT Applications, App Development, IT Support, Hardware Services, Technology Solutions, Business IT Services, Software Development, Network Support, Custom IT Solutions">
+  <meta name="author" content="JAES Solutions">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Our Services | JAES Solutions">
+  <meta property="og:description" content="Explore innovative technology services from JAES Solutions – software development, IT support, hardware services, and more.">
+  <meta property="og:image" content="https://jaessolutions.com/assets/jaes.png">
+  <meta property="og:url" content="https://jaessolutions.com/services.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Services | JAES Solutions">
+  <meta name="twitter:description" content="JAES Solutions offers expert IT and software services designed to power business growth and digital success.">
+  <meta name="twitter:image" content="https://jaessolutions.com/assets/jaes.png">
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+    <script>
+      // Load navbar.html into the #navbar-placeholder div
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+
+            // Now safe to access elements from navbar.html
+            document
+              .querySelector(".nav-ser")
+              ?.addEventListener("mouseover", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.remove("hidden");
+              });
+
+            document
+              .querySelector(".nav-item")
+              ?.addEventListener("mouseleave", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.add("hidden");
+              });
+
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+              if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+              } else {
+                navbar.classList.remove("scrolled");
+              }
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading navbar:", error);
+          });
+      });
+    //footer
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => console.error("Footer load error:", error));
+      });
+
+      // Get the navbar element
+      const navbar = document.getElementById("navbar");
+
+      // Listen for the scroll event
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Change 50 to the scroll position where you want the color change
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+
+
+<section class="services">
+    <h2 class="serh">Services</h2>
+    <div class="services-container">
+        <a href="it.html"><div class="service-box" id="box1">
+            <h3 class="boxh">IT Applications</h3>
+          <div class="box-content">
+            
+            <p class="description">Innovative software solutions tailored to your business needs.</p>
+            <p class="show-more">Show More &gt;</p>
+          </div>
+        </div></a>
+        <a href="app.html"><div class="service-box" id="box2">
+            <h3 class="boxh">App Development</h3>
+          <div class="box-content">
+            <p class="description">Custom mobile and web app development for seamless digital experiences.</p>
+            <p class="show-more">Show More &gt;</p>
+          </div>
+        </div></a>
+        <a href="itservices.html"><div class="service-box" id="box3">
+            <h3 class="boxh">IT Services</h3>
+          <div class="box-content">
+            
+            <p class="description">Comprehensive IT solutions to enhance efficiency and security.</p>
+            <p class="show-more">Show More &gt;</p>
+          </div>
+        </div></a>
+        <a href="hardware.html"><div class="service-box" id="box4">
+            <h3 class="boxh">IT Hardware</h3>
+          <div class="box-content">
+            <p class="description">High-quality hardware solutions for reliable IT infrastructure.</p>
+            <p class="show-more">Show More &gt;</p>
+          </div>
+        </div></a>
+      
+    
+  
+</section>
+</body>
+</html>

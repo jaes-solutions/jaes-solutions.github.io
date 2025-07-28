@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact JAES Solutions | Fast IT Support & Expert Services</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Get in touch with JAES Solutions for top-tier IT, app, web development, and hardware services. Fast responses and reliable support guaranteed.">
+    <meta name="keywords" content="Contact JAES Solutions, JAES IT Support, JAES Software Company, IT Services UK, App Development, Web Development, Hardware Support, JAES Contact Info, Tech Company UK, IT Help">
+    <meta name="author" content="JAES Solutions">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contact Us | JAES Solutions">
+    <meta property="og:description" content="Reach out to JAES Solutions for expert IT, app, and hardware services. We respond within an hour to help with your business needs.">
+    <meta property="og:image" content="https://jaessolutions.com/assets/jaes.png">
+    <meta property="og:url" content="https://jaessolutions.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | JAES Solutions">
+    <meta name="twitter:description" content="Quick and reliable contact with JAES Solutions – your partner in IT, development, and support.">
+    <meta name="twitter:image" content="https://jaessolutions.com/assets/jaes.png">
+</head>
+<body>
+   <div id="navbar-placeholder"></div>
+
+    <script>
+      // Load navbar.html into the #navbar-placeholder div
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+
+            // Now safe to access elements from navbar.html
+            document
+              .querySelector(".nav-ser")
+              ?.addEventListener("mouseover", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.remove("hidden");
+              });
+
+            document
+              .querySelector(".nav-item")
+              ?.addEventListener("mouseleave", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.add("hidden");
+              });
+
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+              if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+              } else {
+                navbar.classList.remove("scrolled");
+              }
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading navbar:", error);
+          });
+      });
+   //footer
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => console.error("Footer load error:", error));
+      });
+
+      // Get the navbar element
+      const navbar = document.getElementById("navbar");
+
+      // Listen for the scroll event
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Change 50 to the scroll position where you want the color change
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+
+
+     <div class="left-side"></div>
+      <section id="contact" class="contact-section">
+        <h1 class="headinh" >Success starts with you—right here, right now.</h1>
+        <div class="contact-grid">
+         <!-- Contact Info -->
+         <div class="contact-info">
+           <h2 class="contact-title">Contact Us</h2>
+           <p class="contact-description">
+             We will definitely respond within an hour! 
+           </p>
+           <div class="contact-details">
+             <div class="contact-item">
+               <!--<img src="assets/telephon.png" alt="Phone Icon" class="contact-icon" />-->
+               <div>
+                 <h3 class="contact-label">Phone</h3>
+                 <p class="contact-text"><a href="tel:+44 1279 217307">+44 1279 217307</a></p>
+               </div>
+             </div>
+             <div class="contact-item">
+               <!--<img src="assets/mail.png" alt="Mail Icon" class="contact-icon" />-->
+               <div>
+                 <h3 class="contact-label">Email</h3>
+                 <p class="contact-text"><a href="mailto:info@jaessolutions.com">info@jaessolutions.com</a></p>
+               </div>
+             </div>
+             <div class="contact-item">
+               <!--<img src="assets/placeholder.png" alt="Map Pin Icon" class="contact-icon" />-->
+               <div>
+                 <h3 class="contact-label">Address</h3>
+                 <p class="contact-text">Devonshire House, 582 Honeypot Lane, Stanmore, England, HA7 1JS, UK</p>
+               </div>
+             </div>
+           </div> 
+         </div>
+   
+         <!-- Contact Form -->
+         <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+          <!-- Replace with your Web3Forms Access Key -->
+          <input type="hidden" name="access_key" value="9fd8a092-0090-4ff5-a466-2f2a706c5b98">
+      
+          <div class="form-group">
+              <label class="forml" for="name">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required />
+          </div>
+          
+          <div class="form-group">
+              <label class="forml" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
+          </div>
+          
+          <div class="form-group">
+              <label class="forml" for="message">Message</label>
+              <textarea id="message" name="message" rows="4" class="form-input" placeholder="How can we help?" required></textarea>
+          </div>
+      
+          <!-- Honeypot Spam Protection -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      
+          <!-- Custom Confirmation / Success Page (optional) -->
+          <!-- <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html"> -->
+      
+          <button type="submit" class="form-button">Send Message</button>
+      </form>
+      
+       </div>
+     </div>
+     <div class="bottom-section">
+      <div class="feedback">
+          <p><strong>Feedback:<br></strong></p> <p class="bod">We value your feedback and are dedicated to improving JAES Solutions every day. Your insights play a key role in shaping its future, fostering continuous growth and innovation.</p>
+      </div>
+      <div class="support">
+          <p><strong>Customer Support:<br></strong></p> <p class="bod">Our team is here to assist you. If you need help, feel free to reach out to us. We are committed to providing quick and efficient support for all your inquiries.</p>
+      </div>
+    </div>  
+
+
+   </section>
+   
+   <div class="container">
+    <div id="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5671.676333461589!2d0.11554352651940478!3d51.77434854055018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d89bacc664fdc9%3A0x75d563677f09425b!2sJAES%20Solutions!5e0!3m2!1sen!2sin!4v1741255824834!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="location-text">
+        <h3 class="loc">Our Location</h3>
+      <p class="headq">Headquarters</p>
+        <p>Devonshire House</p>
+      <p>582 Honeypot Lane</p>
+      <p>Stanmore</p>
+      <p>England</p>
+      <p>HA7 1JS</p>
+      <p>UK</p>
+    </div>
+</div>
+<div id="footer-placeholder"></div>
+</body>
+
+</html>

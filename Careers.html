@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Author: A.N. Author, Illustrator: P. Picture, Category: Books, Price:  £9.24, Length: 784 pages">
+  <title>Explore Careers at JAES Solutions | Tech Jobs & Growth Opportunities</title>
+  <link rel="stylesheet" href="car.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Explore exciting career opportunities at JAES Solutions. Join a team that's building the future of IT, software, and hardware solutions.">
+  <meta name="keywords" content="Careers at JAES, JAES Jobs, Tech Jobs, IT Careers, Software Jobs, Hardware Careers, JAES Solutions Hiring, Work at JAES, Tech Opportunities, Career in Technology">
+  <meta name="author" content="JAES Solutions">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Careers | JAES Solutions">
+  <meta property="og:description" content="Be a part of the innovative team at JAES Solutions. View open positions and apply to shape your future in IT.">
+  <meta property="og:image" content="https://jaessolutions.com/assets/jaes.png">
+  <meta property="og:url" content="https://jaessolutions.com/Careers.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Careers | JAES Solutions">
+  <meta name="twitter:description" content="Discover your next opportunity with JAES Solutions — where innovation and growth meet.">
+  <meta name="twitter:image" content="https://jaessolutions.com/assets/jaes.png">
+
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+    <script>
+      // Load navbar.html into the #navbar-placeholder div
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+
+            // Now safe to access elements from navbar.html
+            document
+              .querySelector(".nav-ser")
+              ?.addEventListener("mouseover", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.remove("hidden");
+              });
+
+            document
+              .querySelector(".nav-item")
+              ?.addEventListener("mouseleave", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.add("hidden");
+              });
+
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+              if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+              } else {
+                navbar.classList.remove("scrolled");
+              }
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading navbar:", error);
+          });
+      });
+    //footer
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => console.error("Footer load error:", error));
+      });
+
+      // Get the navbar element
+      const navbar = document.getElementById("navbar");
+
+      // Listen for the scroll event
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Change 50 to the scroll position where you want the color change
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+
+
+
+<div class="videor">
+  <video id="myVideo" autoplay loop muted>
+      <source src="assets/JAES.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <meta name="Careers at JAES Solutions">
+    <h1>Careers at JAES Solutions</h1>
+    <p>Join our team and be part of a dynamic, innovative, and<br> growth-oriented company shaping the future of IT solutions.</p>
+    <p class="carr">Contact us at <a href="mailto:careers@jaessolutions.com">careers@jaessolutions.com</a></p>
+</div>
+</div>
+
+
+
+<!-- Career Application Form -->
+<form action="https://api.web3forms.com/submit" method="POST" class="career-form" id="career-form" enctype="multipart/form-data">
+  <h1 class="hed">Join us in shaping the future of technology!</h1>
+  <br>
+
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="7fd4c85f-b9bd-4c2e-9022-1695ec7ef4ac">
+
+  <!-- Name -->
+  <div class="form-group">
+    <label class="forml" for="name">Full Name *</label>
+    <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required />
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label class="forml" for="email">Email *</label>
+    <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
+  </div>
+
+  <!-- Phone -->
+  <div class="form-group">
+    <label class="forml" for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Your phone number" required />
+  </div>
+
+  <!-- Position -->
+  <div class="form-group">
+    <label class="forml" for="position">Position Applied For *</label>
+    <input type="text" id="position" name="position" class="form-input" placeholder="Job title" required />
+  </div>
+
+  <!-- Resume Upload 
+   <div class="form-group">
+    <label class="forml" for="resume">Upload Resume *</label>
+    <input type="file" id="resume" name="resume" class="form-input" accept=".pdf,.doc,.docx" required />
+  </div>-->
+  <div class="form-group">
+    <label class="forml" for="resume">Resume (Upload to Google Drive & Paste Link) *</label>
+    <input type="url" id="resume" name="resume" class="form-input" placeholder="Paste Google Drive link here" required />
+  </div>
+  
+  
+
+  <!-- Cover Letter -->
+  <div class="form-group">
+    <label class="forml" for="message">Cover Letter</label>
+    <textarea id="message" name="Cover Letter" rows="4" class="form-input" placeholder="Write a short cover letter"></textarea>
+  </div>
+
+  <!-- Honeypot Spam Protection -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+  <!-- Submit Button -->
+  <button type="submit" class="form-button">Submit Application</button>
+</form>
+
+
+<!--<section id="openings" class="current-openings">
+    <h2 class="heaaa">Current Job Openings</h2>
+    <div id="job-listings"></div>
+</section>-->
+
+<section id="culture" class="work-culture">
+    <h2 class="heaaa">Our Work Culture</h2>
+    <div class="culture-grid">
+        <div class="culture-item">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Innovation</h3>
+            <p>Encouraging creativity and new ideas to stay ahead in the fast-evolving IT landscape.</p>
+        </div>
+        <div class="culture-item">
+            <i class="fas fa-users"></i>
+            <h3>Collaboration</h3>
+            <p>Promoting teamwork and open communication to achieve shared goals.</p>
+        </div>
+        
+        <div class="culture-item">
+            <i class="fas fa-chart-line"></i>
+            <h3>Growth</h3>
+            <p>Providing continuous learning opportunities and career development pathways.</p>
+        </div>
+        <div class="culture-item">
+            <i class="fas fa-balance-scale"></i>
+            <h3>Work-Life Balance</h3>
+            <p>Offering flexible work arrangements and wellness programs to ensure employee well-being.</p>
+        </div>
+        <!--<div class="culture-item">
+            <i class="fas fa-globe"></i>
+            <h3>Diversity & Inclusion</h3>
+            <p>Celebrating diverse perspectives and fostering an inclusive environment for all.</p>
+        </div>-->
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+  <h2 class="heaaa">Employee Testimonials</h2>
+  <div class="testimonial-wrapper">
+    <button class="scroll-btn left" onclick="scrollTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
+    <div class="testimonial-container" id="testimonial-container">
+      <div class="testimonial-card">
+        <p>"Working at JAES Solutions has been an incredible experience. The supportive team environment and opportunities for professional growth have helped me excel in my career."</p>
+        <div class="employee-info">
+          <img src="assets/person1.jpg" alt="Employee Photo" />
+          <div>
+            <strong>Sangeetha Luke</strong><br />
+            <span>Software Developer</span><br />
+            <div class="star-rating">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+</div>
+            <a href="https://www.linkedin.com/in/sangeethaluke/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"I love how JAES Solutions prioritizes innovation and employee well-being. The flexible work culture allows me to maintain a healthy work-life balance."</p>
+        <div class="employee-info">
+          <img src="assets/person2.jpg" alt="Employee Photo" />
+          <div>
+            <strong>Ajneetha Inti</strong><br />
+            <span>Digital Marketer</span><br />
+            <div class="star-rating">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+</div>
+            <a href="https://www.linkedin.com/in/ajneetha/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"JAES Solutions has given me the platform to explore my potential and take on exciting challenges. The leadership team truly values employee contributions."</p>
+        <div class="employee-info">
+          <img src="assets/person3.jpg" alt="Employee Photo" />
+          <div>
+            <strong>Sugeeth Chinta</strong><br />
+            <span>QA Developer</span><br />
+            <div class="star-rating">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+</div>
+            <a href="https://www.linkedin.com/in/sugeeth-c-139002254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p>"JAES Solutions has given me the platform to explore my potential and take on exciting challenges. The leadership team truly values employee contributions."</p>
+        <div class="employee-info">
+          <img src="assets/person3.jpg" alt="Employee Photo" />
+          <div>
+            <strong>Sugeeth Chinta</strong><br />
+            <span>QA Developer</span><br />
+            <div class="star-rating">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+</div>
+            <a href="https://www.linkedin.com/in/sugeeth-c-139002254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+
+    
+    <button class="scroll-btn right" onclick="scrollTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+
+
+
+
+
+<script> 
+document.addEventListener("DOMContentLoaded", function () {
+    const jobListings = [
+        { title: "Data Scientist", location: "San Francisco, USA", description: "Analyze big data for insights." }
+    ];
+
+    const jobContainer = document.getElementById("job-listings");
+
+    jobListings.forEach(job => {
+        const jobElement = document.createElement("div");
+        jobElement.classList.add("job");
+        jobElement.innerHTML = `
+            <h3>${job.title}</h3>
+            <p><strong>Location:</strong> ${job.location}</p>
+            <p>${job.description}</p>
+        `;
+        jobContainer.appendChild(jobElement);
+    });
+});
+
+
+//button 
+
+function scrollTestimonials(direction) {
+    const container = document.getElementById('testimonial-container');
+    const scrollAmount = 340;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<div id="footer-placeholder"></div>
+</body>
+</html>

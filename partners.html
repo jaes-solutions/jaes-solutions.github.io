@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners</title>
+  <link rel="stylesheet" href="partners.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+  <nav class="navbar fixed w-full bg-white shadow-sm z-50" id="navbar">
+    <div class="container-nav">
+      <div class="navbar-wrapper">
+        
+        <div class="logo">
+          <a href="index.html" class="nav-link">
+              <div class="logo-container">
+                  <img src="assets/jaes.png" alt="Logo" class="logo-main">
+                  <img src="assets/9.png" alt="Logo" class="logo-left">
+                  <img src="assets/15.png" alt="Logo" class="logo-bottom">
+              </div>
+          </a>
+      </div>
+      
+        <div class="nav-links desktop-only">
+          <div class="nav-item">
+            <a href="#services" class="nav-ser">What we do</a>
+            <div class="dropdown-menu hidden">
+              <!-- Industries Section -->
+              <div class="dropdown-left">
+                <h4>Industries</h4>
+                <ul class="industries-list">
+                  <li ><a href="industries.html#healthcare" class="in" >Healthcare</a></li>
+                  <li ><a href="industries.html#insurance" class="in" >Insurance</a></li>
+                  <li ><a href="industries.html#government" class="in" >Government</a></li>
+                  <li ><a href="industries.html#manufacturing" class="in" >Manufacturing</a></li>
+                  <li ><a href="industries.html#utilities-energy" class="in" >Utilities & Energy</a></li>
+                  <li ><a href="industries.html#banking-financial" class="in" >Banking Services</a></li>
+                  <li ><a href="industries.html#consumer-retail" class="in" >Consumer & Retail</a></li>
+                  <li ><a href="industries.html#transport-travel" class="in" >Transport & Travel</a></li>
+                  <li ><a href="industries.html#it-media-telecom" class="in" >IT & Telecom Services</a></li>
+              </ul>
+              <!-- Partners Button -->
+              <h4><a href="partners.html" class="partners-button">Meet Our Partners</a></h4>
+              </div>
+              <script>
+                function scrollToSection(id) {
+                    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
+              <!-- Services Section -->
+              <div class="dropdown-right">
+                <h4 class="servic">Services</h4>
+                <a href="it.html" class="dropdown-link">
+                  <img src="assets/58.png" alt="IT Applications" width="20">
+                  <div class="service-content">
+                    IT Applications
+                    <p>Custom software & IT solutions.</p>
+                  </div>
+                </a>
+              
+                <a href="app.html" class="dropdown-link">
+                  <img src="assets/59.png" alt="App Development" width="20">
+                  <div class="service-content">
+                    App Development
+                    <p>Mobile & web app development.</p>
+                  </div>
+                </a>
+              
+                <a href="itservices.html" class="dropdown-link">
+                  <img src="assets/60.png" alt="IT Services" width="20">
+                  <div class="service-content">
+                    IT Services
+                    <p>Cloud computing & network support.</p>
+                  </div>
+                </a>
+              
+                <a href="hardware.html" class="dropdown-link">
+                  <img src="assets/61.png" alt="IT Hardware" width="20">
+                  <div class="service-content">
+                    IT Hardware
+                    <p>Servers, computers & accessories.</p>
+                  </div>
+                </a>
+              
+          
+                <!-- Partners Button -->
+                <h4><a href="partners.html" class="partners-button">Our Partners</a></h4>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link">Who we are</a>
+          <a href="car.html" class="nav-link">Careers</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+        </div>
+        
+        <button class="menu-button mobile-only" onclick="toggleMenu()">
+          <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="about.html" class="mobile-nav-link">About Us</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Us</a>
+    </div>
+  </nav>
+
+  <script>
+    document.querySelector('.nav-ser').addEventListener('mouseover', function () {
+      document.querySelector('.dropdown-menu').classList.remove('hidden');
+    });
+  
+    document.querySelector('.nav-item').addEventListener('mouseleave', function () {
+      document.querySelector('.dropdown-menu').classList.add('hidden');
+    });
+  </script>
+  <script>
+    // Get the navbar element
+    const navbar = document.getElementById('navbar');
+
+    // Listen for the scroll event
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 50) { // Change 50 to the scroll position where you want the color change
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+
+
+<div id="container">
+    <div id="center-text">Our Partners</div>
+</div>
+<script>
+const numImages = 14;
+const images = [
+    "assets/73.png", "assets/74.png", "assets/75.png", "assets/76.png",
+    "assets/77.png", "assets/78.png", "assets/79.png", "assets/80.png",
+    "assets/81.png", "assets/82.png", "assets/83.png", "assets/84.png",
+    "assets/85.png", "assets/86.png"
+];
+
+const objects = [];
+const container = document.getElementById("container");
+const textElement = document.getElementById("center-text");
+
+const random = (min, max) => Math.random() * (max - min) + min;
+
+function isOverlapping(x, y, size) {
+    return objects.some(obj => {
+        const dx = x - obj.x;
+        const dy = y - obj.y;
+        return Math.sqrt(dx * dx + dy * dy) < size * 1.5;
+    });
+}
+
+function isOverlappingText(x, y, size) {
+    const textRect = textElement.getBoundingClientRect();
+    return (
+        x + size > textRect.left &&
+        x < textRect.right &&
+        y + size > textRect.top &&
+        y < textRect.bottom
+    );
+}
+
+for (let i = 0; i < numImages; i++) {
+    let x, y;
+    do {
+        x = random(50, window.innerWidth - 150);
+        y = random(50, window.innerHeight - 150);
+    } while (isOverlapping(x, y, 120) || isOverlappingText(x, y, 120));
+
+    const imageContainer = document.createElement("div");
+    imageContainer.classList.add("image-container");
+    imageContainer.style.left = `${x}px`;
+    imageContainer.style.top = `${y}px`;
+
+    const img = document.createElement("img");
+    img.src = images[i];
+    img.style.width = "170px"; // Adjust image size
+    img.style.height = "170px";
+    imageContainer.appendChild(img);
+    container.appendChild(imageContainer);
+
+    objects.push({
+        element: imageContainer,
+        x,
+        y,
+        size: 170, // Match image size
+        vx: random(-1, 1),
+        vy: random(-1, 1),
+        dragging: false
+    });
+
+    imageContainer.addEventListener("mousedown", (e) => {
+        const index = objects.findIndex(obj => obj.element === imageContainer);
+        const selectedObject = objects[index];
+
+        selectedObject.dragging = true;
+        selectedObject.vx = 0;
+        selectedObject.vy = 0;
+
+        const offsetX = e.clientX - selectedObject.x;
+        const offsetY = e.clientY - selectedObject.y;
+
+        function onMouseMove(event) {
+            selectedObject.x = event.clientX - offsetX;
+            selectedObject.y = event.clientY - offsetY;
+        }
+
+        function onMouseUp() {
+            selectedObject.dragging = false;
+            selectedObject.vx = random(-2, 2);
+            selectedObject.vy = random(-2, 2);
+            window.removeEventListener("mousemove", onMouseMove);
+            window.removeEventListener("mouseup", onMouseUp);
+        }
+
+        window.addEventListener("mousemove", onMouseMove);
+        window.addEventListener("mouseup", onMouseUp);
+    });
+}
+
+function update() {
+    const textRect = textElement.getBoundingClientRect();
+
+    for (let i = 0; i < objects.length; i++) {
+        const obj1 = objects[i];
+
+        if (!obj1.dragging) {
+            obj1.x += obj1.vx;
+            obj1.y += obj1.vy;
+
+            // Bounce off walls
+            if (obj1.x <= 0 || obj1.x >= window.innerWidth - obj1.size) {
+                obj1.vx *= -1;
+                obj1.x = Math.max(0, Math.min(obj1.x, window.innerWidth - obj1.size));
+            }
+            if (obj1.y <= 0 || obj1.y >= window.innerHeight - obj1.size) {
+                obj1.vy *= -1;
+                obj1.y = Math.max(0, Math.min(obj1.y, window.innerHeight - obj1.size));
+            }
+
+            // Bounce off center text
+            if (
+                obj1.x + obj1.size > textRect.left &&
+                obj1.x < textRect.right &&
+                obj1.y + obj1.size > textRect.top &&
+                obj1.y < textRect.bottom
+            ) {
+                obj1.vx *= -1;
+                obj1.vy *= -1;
+            }
+        }
+
+        // Collision handling
+        for (let j = i + 1; j < objects.length; j++) {
+            const obj2 = objects[j];
+            const dx = obj1.x - obj2.x;
+            const dy = obj1.y - obj2.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < obj1.size) {
+                // Calculate angle
+                const angle = Math.atan2(dy, dx);
+                const speed1 = Math.sqrt(obj1.vx ** 2 + obj1.vy ** 2);
+                const speed2 = Math.sqrt(obj2.vx ** 2 + obj2.vy ** 2);
+
+                // Swap velocities based on direction
+                obj1.vx = speed2 * Math.cos(angle);
+                obj1.vy = speed2 * Math.sin(angle);
+                obj2.vx = speed1 * Math.cos(angle + Math.PI);
+                obj2.vy = speed1 * Math.sin(angle + Math.PI);
+
+                // Slightly separate objects to prevent sticking
+                const overlap = (obj1.size - distance) / 2;
+                obj1.x += Math.cos(angle) * overlap;
+                obj1.y += Math.sin(angle) * overlap;
+                obj2.x -= Math.cos(angle) * overlap;
+                obj2.y -= Math.sin(angle) * overlap;
+            }
+        }
+
+        obj1.element.style.left = `${obj1.x}px`;
+        obj1.element.style.top = `${obj1.y}px`;
+    }
+
+    requestAnimationFrame(update);
+}
+
+update();
+</script>
+</body>
+</html>

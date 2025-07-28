@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners</title>
+    <link rel="stylesheet" href="partner.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Meet our trusted partners who help JAES Solutions deliver exceptional IT, software, and hardware services across industries."
+    />
+    <meta
+      name="keywords"
+      content="JAES Partners, Technology Partners, IT Partnerships, Software Collaboration, Business Partnerships, Strategic IT Allies, Partner Network, Trusted Vendors, JAES Solutions Partnerships"
+    />
+    <meta name="author" content="JAES Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Our Partners | JAES Solutions" />
+    <meta
+      property="og:description"
+      content="Discover the strong network of partners working with JAES Solutions to deliver value-driven technology services and solutions."
+    />
+    <meta
+      property="og:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+    <meta property="og:url" content="https://jaessolutions.com/partner.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Partners | JAES Solutions" />
+    <meta
+      name="twitter:description"
+      content="Explore our collaboration with trusted partners who support JAES Solutions in delivering top-tier IT and software services."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+  </head>
+
+  <body>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+      // Load navbar.html into the #navbar-placeholder div
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("navbar.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+
+            // Now safe to access elements from navbar.html
+            document
+              .querySelector(".nav-ser")
+              ?.addEventListener("mouseover", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.remove("hidden");
+              });
+
+            document
+              .querySelector(".nav-item")
+              ?.addEventListener("mouseleave", () => {
+                document
+                  .querySelector(".dropdown-menu")
+                  ?.classList.add("hidden");
+              });
+
+            const navbar = document.getElementById("navbar");
+            window.addEventListener("scroll", () => {
+              if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+              } else {
+                navbar.classList.remove("scrolled");
+              }
+            });
+          })
+          .catch((error) => {
+            console.error("Error loading navbar:", error);
+          });
+      });
+      //footer
+
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-placeholder").innerHTML = data;
+          })
+          .catch((error) => console.error("Footer load error:", error));
+      });
+
+      // Get the navbar element
+      const navbar = document.getElementById("navbar");
+
+      // Listen for the scroll event
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          // Change 50 to the scroll position where you want the color change
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      function toggleMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+
+    <div class="container">
+      <h1>Our Trusted Partners</h1>
+      <div class="partners">
+        <div class="partner-logo">
+          <img src="assets/73.png" alt="Partner 1" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/74.png" alt="Partner 2" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/75.png" alt="Partner 3" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/76.png" alt="Partner 4" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/77.png" alt="Partner 5" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/78.png" alt="Partner 6" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/79.png" alt="Partner 7" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/80.png" alt="Partner 8" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/81.png" alt="Partner 9" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/82.png" alt="Partner 10" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/83.png" alt="Partner 11" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/84.png" alt="Partner 12" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/85.png" alt="Partner 13" />
+        </div>
+        <div class="partner-logo">
+          <img src="assets/86.png" alt="Partner 14" />
+        </div>
+      </div>
+    </div>
+    <div id="footer-placeholder"></div>
+  </body>
+</html>
