@@ -598,7 +598,7 @@ font-size: 25px;
 
 /* Career Form */
 .career-form {
-  background-color: #f8f8f8;
+  background-color: black;
   padding: 2rem;
   
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -670,7 +670,7 @@ label {
 .current-openings, .testimonials {
     padding: 50px 0;
     width: 100%;
-    background: white;
+    background: black;
     
     margin-top: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -683,7 +683,7 @@ label {
 .work-culture{
   padding: 50px 0;
   width: 90%;
-  background: white;
+  background-color: black;
   padding-left: 180px;
   padding-right: 50px;
   margin-top: 20px;
@@ -716,6 +716,7 @@ label {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    background-color: black;
 }
 
 .culture-item {
