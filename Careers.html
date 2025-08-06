@@ -215,7 +215,7 @@
 <section id="testimonials" class="testimonials">
   <h2 class="heaaa">Employee Testimonials</h2>
   <div class="testimonial-wrapper">
-    <button class="scroll-btn left" onclick="scrollTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
+    
     <div class="testimonial-container" id="testimonial-container">
       <div class="testimonial-card">
         <p>"Working at JAES Solutions has been an incredible experience. The supportive team environment and opportunities for professional growth have helped me excel in my career."</p>
@@ -277,8 +277,8 @@
         <div class="employee-info">
           <img src="assets/person3.jpg" alt="Employee Photo" />
           <div>
-            <strong>Sugeeth Chinta</strong><br />
-            <span>QA Developer</span><br />
+            <strong>Jayden Murala</strong><br />
+            <span>Multimedia Designer</span><br />
             <div class="star-rating">
   <i class="fas fa-star"></i>
   <i class="fas fa-star"></i>
@@ -294,8 +294,13 @@
     
     </div>
 
-    
-    <button class="scroll-btn right" onclick="scrollTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
+       <button class="scroll-btn left" onclick="scrollTestimonials('testimonial-container', -340)">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+
+       <button class="scroll-btn right" onclick="scrollTestimonials('testimonial-container', 340)">
+      <i class="fas fa-chevron-right"></i>
+    </button>
   </div>
 </section>
 
@@ -326,14 +331,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //button 
 
-function scrollTestimonials(direction) {
-    const container = document.getElementById('testimonial-container');
-    const scrollAmount = 340;
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
+function scrollTestimonials(rowId, scrollAmount) {
+  const row = document.getElementById(rowId);
+  row.scrollBy({
+    left: scrollAmount,
+    behavior: "smooth",
+  });
+}
 </script>
 <div id="footer-placeholder"></div>
 </body>
