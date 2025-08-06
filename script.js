@@ -261,6 +261,34 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(error => console.error("Footer load error:", error));
   });
+  // Video player controls
+const video = window.innerWidth <= 768 
+  ? document.getElementById("myVideoMobile") 
+  : document.getElementById("myVideo");
+
+const playPauseBtn = document.getElementById("playPauseBtn");
+const muteUnmuteBtn = document.getElementById("muteUnmuteBtn");
+const playPauseIcon = document.getElementById("playPauseIcon");
+const muteUnmuteIcon = document.getElementById("muteUnmuteIcon");
+
+playPauseBtn.addEventListener("click", () => {
+  if (video.paused) {
+    video.play();
+    playPauseIcon.src = "assets/pause.png";
+  } else {
+    video.pause();
+    playPauseIcon.src = "assets/play.png";
+  }
+});
+
+muteUnmuteBtn.addEventListener("click", () => {
+  video.muted = !video.muted;
+  muteUnmuteIcon.src = video.muted 
+    ? "assets/volume.png"
+    : "assets/unmute.png";
+});
+
+
   
 // Parallax scroll text effect
 window.addEventListener('scroll', () => {
@@ -320,32 +348,4 @@ button.addEventListener('mouseenter', () => {
 button.addEventListener('mouseleave', () => {
   circle.style.opacity = '1';
 });
-
-// Video player controls
-const video = window.innerWidth <= 768 
-  ? document.getElementById("myVideoMobile") 
-  : document.getElementById("myVideo");
-
-const playPauseBtn = document.getElementById("playPauseBtn");
-const muteUnmuteBtn = document.getElementById("muteUnmuteBtn");
-const playPauseIcon = document.getElementById("playPauseIcon");
-const muteUnmuteIcon = document.getElementById("muteUnmuteIcon");
-
-playPauseBtn.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playPauseIcon.src = "assets/pause.png";
-  } else {
-    video.pause();
-    playPauseIcon.src = "assets/play.png";
-  }
-});
-
-muteUnmuteBtn.addEventListener("click", () => {
-  video.muted = !video.muted;
-  muteUnmuteIcon.src = video.muted 
-    ? "assets/volume.png"
-    : "assets/unmute.png";
-});
-
 
