@@ -7,6 +7,47 @@
       App Development Services | Android, iOS & Custom Solutions | JAES
       Solutions
     </title>
+
+    <link rel="icon" href="favicon.ico" />
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+
+    <!-- Android / Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/android-chrome-512x512.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="app.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
@@ -46,7 +87,23 @@
       name="twitter:image"
       content="https://jaessolutions.com/assets/jaes.png"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LYDJ4DEB0S"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-LYDJ4DEB0S");
+  </script>
   <body>
     <div id="navbar-placeholder"></div>
 
@@ -118,18 +175,125 @@
       }
     </script>
 
-    <div class="video-background">
-      <video autoplay muted loop>
-        <source src="assets/baa.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="full-screen-image"></div>
+    <div class="full-screen-imag"></div>
     <a href="contact.html"><button class="contact-btn">Contact Us</button></a>
 
-    <div class="full-screen-imag"></div>
+    <section class="py-16 bg-black">
+      <div class="max-w-6xl mx-auto px-6 text-center" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-600 mb-6">
+          Our App Development Services
+        </h2>
+        <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+          At <span class="font-semibold">JAES Solutions</span>, we specialize in
+          creating innovative and scalable mobile and web applications. Whether
+          you need an <span class="text-blue-500">Android</span>,
+          <span class="text-blue-500">iOS</span>, or cross-platform solution,
+          our team ensures seamless performance, modern design, and future-ready
+          technology.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-20 bg-black">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-center text-white mb-16"
+          data-aos="fade-up"
+        >
+          Why Choose Our App Development?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div
+            class="p-8 bg-gray-900 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+            data-aos="zoom-in"
+          >
+            <h3 class="text-xl font-semibold text-blue-600 mb-3">
+              Custom Solutions
+            </h3>
+            <p class="text-gray-300">
+              We tailor applications to your unique business needs, ensuring
+              scalability and innovation.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-gray-900 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+            data-aos="zoom-in"
+          >
+            <h3 class="text-xl font-semibold text-blue-600 mb-3">
+              Cross-Platform
+            </h3>
+            <p class="text-gray-300">
+              Build once and deploy everywhere with Android, iOS, and web
+              solutions using modern frameworks.
+            </p>
+          </div>
+          <div
+            class="p-8 bg-gray-900 rounded-xl shadow hover:shadow-lg hover:scale-105 transition"
+            data-aos="zoom-in"
+          >
+            <h3 class="text-xl font-semibold text-blue-600 mb-3">
+              Future Ready
+            </h3>
+            <p class="text-gray-300">
+              Our apps are designed with the latest tech, ready to scale as your
+              business grows.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-black">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12"
+      >
+        <div class="md:w-1/2" data-aos="fade-right">
+          <img
+            src="assets/app-dev.png"
+            alt="App Development"
+            class="rounded-2xl shadow-lg"
+          />
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+            Seamless Development Process
+          </h2>
+          <p class="text-lg text-gray-300 mb-4 leading-relaxed">
+            From ideation to deployment, we follow agile methodologies to
+            deliver apps quickly without compromising quality.
+          </p>
+          <ul class="space-y-4 text-gray-300">
+            <li>✔ Agile & Transparent Process</li>
+            <li>✔ Scalable Architecture</li>
+            <li>✔ Ongoing Maintenance & Support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-black text-white text-center">
+      <div class="max-w-4xl mx-auto px-6" data-aos="zoom-in-up">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+          Ready to Build Your Next Big App?
+        </h2>
+        <p class="text-lg md:text-xl mb-8">
+          Let’s collaborate and turn your ideas into reality with innovative
+          mobile and web applications.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-transform transform hover:scale-105"
+          >Get Started</a
+        >
+      </div>
+    </section>
 
     <div id="footer-placeholder"></div>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
-  
 </html>

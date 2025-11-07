@@ -1,30 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Our Services | Complete IT, App & Hardware Solutions | JAES Solutions
+    </title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services | Complete IT, App & Hardware Solutions | JAES Solutions</title>
-  <link rel="stylesheet" href="services.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <meta name="description" content="Discover the full range of services offered by JAES Solutions, including IT applications, mobile and web app development, IT support, and hardware solutions.">
-  <meta name="keywords" content="JAES Services, IT Applications, App Development, IT Support, Hardware Services, Technology Solutions, Business IT Services, Software Development, Network Support, Custom IT Solutions">
-  <meta name="author" content="JAES Solutions">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Our Services | JAES Solutions">
-  <meta property="og:description" content="Explore innovative technology services from JAES Solutions – software development, IT support, hardware services, and more.">
-  <meta property="og:image" content="https://jaessolutions.com/assets/jaes.png">
-  <meta property="og:url" content="https://jaessolutions.com/services.html">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Our Services | JAES Solutions">
-  <meta name="twitter:description" content="JAES Solutions offers expert IT and software services designed to power business growth and digital success.">
-  <meta name="twitter:image" content="https://jaessolutions.com/assets/jaes.png">
-</head>
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
 
-<body>
-  <div id="navbar-placeholder"></div>
+    <!-- Android / Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/android-chrome-512x512.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="stylesheet" href="services.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Discover the full range of services offered by JAES Solutions, including IT applications, mobile and web app development, IT support, and hardware solutions."
+    />
+    <meta
+      name="keywords"
+      content="JAES Services, IT Applications, App Development, IT Support, Hardware Services, Technology Solutions, Business IT Services, Software Development, Network Support, Custom IT Solutions"
+    />
+    <meta name="author" content="JAES Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Our Services | JAES Solutions" />
+    <meta
+      property="og:description"
+      content="Explore innovative technology services from JAES Solutions – software development, IT support, hardware services, and more."
+    />
+    <meta
+      property="og:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+    <meta property="og:url" content="https://jaessolutions.com/services.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Our Services | JAES Solutions" />
+    <meta
+      name="twitter:description"
+      content="JAES Solutions offers expert IT and software services designed to power business growth and digital success."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LYDJ4DEB0S"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-LYDJ4DEB0S");
+  </script>
+  <body>
+    <div id="navbar-placeholder"></div>
 
     <script>
       // Load navbar.html into the #navbar-placeholder div
@@ -64,7 +142,7 @@
             console.error("Error loading navbar:", error);
           });
       });
-    //footer
+      //footer
 
       document.addEventListener("DOMContentLoaded", () => {
         fetch("footer.html")
@@ -94,44 +172,170 @@
       }
     </script>
 
-
-
-<section class="services">
-    <h2 class="serh">Services</h2>
-    <div class="services-container">
-        <a href="it.html"><div class="service-box" id="box1">
-            <h3 class="boxh">IT Applications</h3>
-          <div class="box-content">
-            
-            <p class="description">Innovative software solutions tailored to your business needs.</p>
-            <p class="show-more">Show More &gt;</p>
-          </div>
-        </div></a>
-        <a href="app.html"><div class="service-box" id="box2">
-            <h3 class="boxh">App Development</h3>
-          <div class="box-content">
-            <p class="description">Custom mobile and web app development for seamless digital experiences.</p>
-            <p class="show-more">Show More &gt;</p>
-          </div>
-        </div></a>
-        <a href="itservices.html"><div class="service-box" id="box3">
-            <h3 class="boxh">IT Services</h3>
-          <div class="box-content">
-            
-            <p class="description">Comprehensive IT solutions to enhance efficiency and security.</p>
-            <p class="show-more">Show More &gt;</p>
-          </div>
-        </div></a>
-        <a href="hardware.html"><div class="service-box" id="box4">
-            <h3 class="boxh">IT Hardware</h3>
-          <div class="box-content">
-            <p class="description">High-quality hardware solutions for reliable IT infrastructure.</p>
-            <p class="show-more">Show More &gt;</p>
-          </div>
-        </div></a>
-      
-    
-  
-</section>
-</body>
+    <!-- Services Section (Tailwind CSS + Animation Classes) -->
+    <section class="services mb-12" id="services">
+      <h2 class="serh text-center mt-24 mb-8 text-[30px] text-[#4299e6]">
+        What We Offer
+      </h2>
+      <div class="services-wrapper flex justify-center px-5">
+        <div
+          class="services-container flex flex-col items-center md:flex-row md:items-start justify-center gap-4 overflow-x-auto w-full py-5"
+        >
+          <!-- Service Box 1 -->
+          <a href="ITApplications.html" class="block flex-shrink-0 mx-auto">
+            <div
+              class="service-box group relative w-[240px] h-[300px] rounded-lg overflow-hidden cursor-pointer bg-[#111111] transition-all duration-400 ease-in-out"
+              id="box1"
+            >
+              <img
+                src="assets/1.png"
+                class="service-bg absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400 ease-in-out group-hover:scale-[2.2] group-hover:blur-sm"
+                alt="IT Applications"
+              />
+              <h3
+                class="boxh relative z-2 p-5 m-0 text-white text-[1.22rem] font-bold"
+              >
+                IT Applications
+              </h3>
+              <div
+                class="box-content absolute inset-0 text-white p-5 opacity-0 translate-x-full transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-x-0"
+              >
+                <p class="description mt-10 text-[15px] leading-[1.5]">
+                  Innovative software solutions tailored to your business needs.
+                </p>
+                <p
+                  class="show-more absolute bottom-4 right-4 text-[0.9rem] text-white p-1.5 rounded transition-colors duration-300"
+                >
+                  Show More &gt;
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- Service Box 2 -->
+          <a href="AppDevelopement.html" class="block flex-shrink-0 mx-auto">
+            <div
+              class="service-box group relative w-[240px] h-[300px] rounded-lg overflow-hidden cursor-pointer bg-[#111111] transition-all duration-400 ease-in-out"
+              id="box2"
+            >
+              <img
+                src="assets/3.png"
+                class="service-bg absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400 ease-in-out group-hover:scale-[2.2] group-hover:blur-sm"
+                alt="App Development"
+              />
+              <h3
+                class="boxh relative z-2 p-5 m-0 text-white text-[1.22rem] font-bold"
+              >
+                App Development
+              </h3>
+              <div
+                class="box-content absolute inset-0 text-white p-5 opacity-0 translate-x-full transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-x-0"
+              >
+                <p class="description mt-10 text-[15px] leading-[1.5]">
+                  Custom mobile and web app development for seamless digital
+                  experiences.
+                </p>
+                <p
+                  class="show-more absolute bottom-4 right-4 text-[0.9rem] text-white p-1.5 rounded transition-colors duration-300"
+                >
+                  Show More &gt;
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- Service Box 3 -->
+          <a href="ITServices.html" class="block flex-shrink-0 mx-auto">
+            <div
+              class="service-box group relative w-[240px] h-[300px] rounded-lg overflow-hidden cursor-pointer bg-[#111111] transition-all duration-400 ease-in-out"
+              id="box3"
+            >
+              <img
+                src="assets/4.png"
+                class="service-bg absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400 ease-in-out group-hover:scale-[2.2] group-hover:blur-sm"
+                alt="IT Services"
+              />
+              <h3
+                class="boxh relative z-2 p-5 m-0 text-white text-[1.22rem] font-bold"
+              >
+                IT Services
+              </h3>
+              <div
+                class="box-content absolute inset-0 text-white p-5 opacity-0 translate-x-full transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-x-0"
+              >
+                <p class="description mt-10 text-[15px] leading-[1.5]">
+                  Comprehensive IT solutions to enhance efficiency and security.
+                </p>
+                <p
+                  class="show-more absolute bottom-4 right-4 text-[0.9rem] text-white p-1.5 rounded transition-colors duration-300"
+                >
+                  Show More &gt;
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- Service Box 4 -->
+          <a href="ITHardware.html" class="block flex-shrink-0 mx-auto">
+            <div
+              class="service-box group relative w-[240px] h-[300px] rounded-lg overflow-hidden cursor-pointer bg-[#111111] transition-all duration-400 ease-in-out"
+              id="box4"
+            >
+              <img
+                src="assets/web.png"
+                class="service-bg absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400 ease-in-out group-hover:scale-[2.2] group-hover:blur-sm"
+                alt="IT Hardware"
+              />
+              <h3
+                class="boxh relative z-2 p-5 m-0 text-white text-[1.22rem] font-bold"
+              >
+                IT Hardware
+              </h3>
+              <div
+                class="box-content absolute inset-0 text-white p-5 opacity-0 translate-x-full transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-x-0"
+              >
+                <p class="description mt-10 text-[15px] leading-[1.5]">
+                  High-quality hardware solutions for reliable IT
+                  infrastructure.
+                </p>
+                <p
+                  class="show-more absolute bottom-4 right-4 text-[0.9rem] text-white p-1.5 rounded transition-colors duration-300"
+                >
+                  Show More &gt;
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- Service Box 5 -->
+          <a href="WebDevelopement.html" class="block flex-shrink-0 mx-auto">
+            <div
+              class="service-box group relative w-[240px] h-[300px] rounded-lg overflow-hidden cursor-pointer bg-[#111111] transition-all duration-400 ease-in-out"
+              id="box5"
+            >
+              <img
+                src="assets/2.png"
+                class="service-bg absolute top-0 left-0 w-full h-full object-cover transition-transform duration-400 ease-in-out group-hover:scale-[2.2] group-hover:blur-sm"
+                alt="Web Development"
+              />
+              <h3
+                class="boxh relative z-2 p-5 m-0 text-white text-[1.22rem] font-bold"
+              >
+                Web Development
+              </h3>
+              <div
+                class="box-content absolute inset-0 text-white p-5 opacity-0 translate-x-full transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:translate-x-0"
+              >
+                <p class="description mt-10 text-[15px] leading-[1.5]">
+                  Responsive websites that perform fast and look great on any
+                  device.
+                </p>
+                <p
+                  class="show-more absolute bottom-4 right-4 text-[0.9rem] text-white p-1.5 rounded transition-colors duration-300"
+                >
+                  Show More &gt;
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

@@ -137,7 +137,11 @@
     margin-top: 3px;
     margin-left: 65px;
 }
-
+.logo-container img {
+  max-width: none !important; /* prevents Tailwind from shrinking the image */
+  height: 150px !important; /* keeps fixed height */
+  width: auto !important; /* keeps proportions */
+}
 .logo-left,
 .logo-bottom {
     position: absolute;
@@ -421,6 +425,9 @@ color: #4299e6;
   }
 
 
+
+
+
 .webdev-intro {
     padding: 90px 20px;
     background: linear-gradient(135deg, #f8fbff, #e3f2fd);
@@ -466,6 +473,7 @@ color: #4299e6;
     pointer-events: none;
   }
 
+
   .video-container:hover video {
     pointer-events: auto;
   }
@@ -504,6 +512,7 @@ color: #4299e6;
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
+    border-radius: 50px;
   }
   
   .service-card h3 {

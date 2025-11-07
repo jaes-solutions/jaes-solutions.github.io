@@ -1,35 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Author: A.N. Author, Illustrator: P. Picture, Category: Books, Price:  £9.24, Length: 784 pages"
+    />
+    <title>
+      Explore Careers at JAES Solutions | Tech Jobs & Growth Opportunities
+    </title>
+    <link rel="icon" href="favicon.ico" />
+    <!-- Standard Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
 
-<head>
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Author: A.N. Author, Illustrator: P. Picture, Category: Books, Price:  £9.24, Length: 784 pages">
-  <title>Explore Careers at JAES Solutions | Tech Jobs & Growth Opportunities</title>
-  <link rel="stylesheet" href="car.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <meta name="description" content="Explore exciting career opportunities at JAES Solutions. Join a team that's building the future of IT, software, and hardware solutions.">
-  <meta name="keywords" content="Careers at JAES, JAES Jobs, Tech Jobs, IT Careers, Software Jobs, Hardware Careers, JAES Solutions Hiring, Work at JAES, Tech Opportunities, Career in Technology">
-  <meta name="author" content="JAES Solutions">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Careers | JAES Solutions">
-  <meta property="og:description" content="Be a part of the innovative team at JAES Solutions. View open positions and apply to shape your future in IT.">
-  <meta property="og:image" content="https://jaessolutions.com/assets/jaes.png">
-  <meta property="og:url" content="https://jaessolutions.com/Careers.html">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Careers | JAES Solutions">
-  <meta name="twitter:description" content="Discover your next opportunity with JAES Solutions — where innovation and growth meet.">
-  <meta name="twitter:image" content="https://jaessolutions.com/assets/jaes.png">
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
 
-</head>
+    <!-- Android / Chrome -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/android-chrome-512x512.png"
+    />
 
-<body>
-  <div id="navbar-placeholder"></div>
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <link rel="stylesheet" href="car.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Explore exciting career opportunities at JAES Solutions. Join a team that's building the future of IT, software, and hardware solutions."
+    />
+    <meta
+      name="keywords"
+      content="Careers at JAES, JAES Jobs, Tech Jobs, IT Careers, Software Jobs, Hardware Careers, JAES Solutions Hiring, Work at JAES, Tech Opportunities, Career in Technology"
+    />
+    <meta name="author" content="JAES Solutions" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Careers | JAES Solutions" />
+    <meta
+      property="og:description"
+      content="Be a part of the innovative team at JAES Solutions. View open positions and apply to shape your future in IT."
+    />
+    <meta
+      property="og:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+    <meta property="og:url" content="https://jaessolutions.com/Careers.html" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Careers | JAES Solutions" />
+    <meta
+      name="twitter:description"
+      content="Discover your next opportunity with JAES Solutions — where innovation and growth meet."
+    />
+    <meta
+      name="twitter:image"
+      content="https://jaessolutions.com/assets/jaes.png"
+    />
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-LYDJ4DEB0S"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-LYDJ4DEB0S");
+  </script>
+  <body>
+    <div id="navbar-placeholder"></div>
 
     <script>
       // Load navbar.html into the #navbar-placeholder div
@@ -69,7 +147,7 @@
             console.error("Error loading navbar:", error);
           });
       });
-    //footer
+      //footer
 
       document.addEventListener("DOMContentLoaded", () => {
         fetch("footer.html")
@@ -99,242 +177,485 @@
       }
     </script>
 
+    <div class="relative w-full h-screen overflow-hidden">
+      <!-- Background Video -->
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        autoplay
+        loop
+        muted
+      >
+        <source src="assets/JAES.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
+      <!-- Full-Screen Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
 
+      <!-- Overlay Content -->
+      <div
+        class="relative z-20 flex flex-col justify-center h-full max-w-4xl px-8 md:px-16 text-left text-white"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Careers at JAES Solutions
+        </h1>
+        <p class="text-lg md:text-2xl mb-6">
+          Join our team and be part of a dynamic, innovative, and<br />
+          growth-oriented company shaping the future of IT solutions.
+        </p>
+        
+        <p class="text-lg md:text-xl">
+          Contact us at
+          <a
+            href="mailto:careers@jaessolutions.com"
+            class="underline hover:text-gray-300"
+            >careers@jaessolutions.com</a
+          >
+          
+        </p>
+         <a
+          href="contact.html"
+          class="inline-flex w-fit mt-10 items-center gap-[10px] px-[18px] py-[10px] border border-white rounded-full text-white bg-transparent font-semibold text-[15px] no-underline transition-all duration-300 ease-in-out hover:bg-[#42cdf6] hover:text-black hover:border-white relative overflow-hidden justify-center"
+        >
+          <span class="flex items-center">
+            Talk to an Expert
+            <span
+              class="bg-white rounded-full p-2 flex items-center justify-center transition-colors duration-300 ease-in-out hover:bg-[#b6fffa] ml-2"
+            >
+              <img
+                src="assets/arrow.png"
+                alt="Arrow Icon"
+                class="w-4 h-4 object-contain transition-transform duration-300 ease-in-out group-hover:translate-x-[2px]"
+              />
+            </span>
+          </span>
+        </a>
+      </div>
+      
+    </div>
 
-<div class="videor">
-  <video id="myVideo" autoplay loop muted>
-      <source src="assets/JAES.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-  </video>
-  <div class="content">
-    <meta name="Careers at JAES Solutions">
-    <h1>Careers at JAES Solutions</h1>
-    <p>Join our team and be part of a dynamic, innovative, and<br> growth-oriented company shaping the future of IT solutions.</p>
-    <p class="carr">Contact us at <a href="mailto:careers@jaessolutions.com">careers@jaessolutions.com</a></p>
-</div>
-</div>
+    <!-- Hero-Style Innovation Section -->
+    <section class="w-full bg-black text-white py-16 px-4 md:py-24">
+      <div class="max-w-5xl mx-auto flex flex-col items-center text-center">
+        <h1 class="text-8xl md:text-8xl font-extrabold mb-4 leading-tight">
+          Work With Us, Shape the Future
+        </h1>
+        <p class="text-lg md:text-2xl max-w-2xl">
+          Be part of a team where innovation thrives, your ideas are valued, and
+          your growth is our priority. Together, we create the future of
+          technology.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-flex w-fit mt-10 items-center gap-[10px] px-[18px] py-[10px] border border-white rounded-full text-white bg-transparent font-semibold text-[15px] no-underline transition-all duration-300 ease-in-out hover:bg-[#42cdf6] hover:text-black hover:border-white relative overflow-hidden justify-center"
+        >
+          <span class="flex items-center">
+            Talk to an Expert
+            <span
+              class="bg-white rounded-full p-2 flex items-center justify-center transition-colors duration-300 ease-in-out hover:bg-[#b6fffa] ml-2"
+            >
+              <img
+                src="assets/arrow.png"
+                alt="Arrow Icon"
+                class="w-4 h-4 object-contain transition-transform duration-300 ease-in-out group-hover:translate-x-[2px]"
+              />
+            </span>
+          </span>
+        </a>
+      </div>
+    </section>
+    <!-- Career Application Form -->
+    <!-- Career Application Form (Dark Theme) -->
+    <form
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      id="career-form"
+      enctype="multipart/form-data"
+      class="max-w-xl mx-auto my-12 bg-gray-900/90 rounded-2xl shadow-2xl px-8 py-10 flex flex-col gap-6 backdrop-blur-md border border-gray-800"
+    >
+      <h1 class="text-3xl font-bold text-center text-white mb-4">
+        Join us in shaping the future of technology!
+      </h1>
 
+      <!-- Web3Forms Access Key -->
+      <input
+        type="hidden"
+        name="access_key"
+        value="7fd4c85f-b9bd-4c2e-9022-1695ec7ef4ac"
+      />
 
+      <!-- Name -->
+      <div class="flex flex-col gap-1">
+        <label for="name" class="font-medium text-gray-200 mb-1"
+          >Full Name <span class="text-blue-500">*</span></label
+        >
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+          class="rounded-lg border border-gray-700 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-white placeholder-gray-400 transition"
+        />
+      </div>
 
-<!-- Career Application Form -->
-<form action="https://api.web3forms.com/submit" method="POST" class="career-form" id="career-form" enctype="multipart/form-data">
-  <h1 class="hed">Join us in shaping the future of technology!</h1>
-  <br>
+      <!-- Email -->
+      <div class="flex flex-col gap-1">
+        <label for="email" class="font-medium text-gray-200 mb-1"
+          >Email <span class="text-blue-500">*</span></label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="your@email.com"
+          required
+          class="rounded-lg border border-gray-700 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-white placeholder-gray-400 transition"
+        />
+      </div>
 
-  <!-- Web3Forms Access Key -->
-  <input type="hidden" name="access_key" value="7fd4c85f-b9bd-4c2e-9022-1695ec7ef4ac">
+      <!-- Phone -->
+      <div class="flex flex-col gap-1">
+        <label for="phone" class="font-medium text-gray-200 mb-1"
+          >Phone Number <span class="text-blue-500">*</span></label
+        >
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Your phone number"
+          required
+          class="rounded-lg border border-gray-700 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-white placeholder-gray-400 transition"
+        />
+      </div>
 
-  <!-- Name -->
-  <div class="form-group">
-    <label class="forml" for="name">Full Name *</label>
-    <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required />
-  </div>
+      <!-- Position -->
+      <div class="flex flex-col gap-1">
+        <label for="position" class="font-medium text-gray-200 mb-1"
+          >Position Applied For <span class="text-blue-500">*</span></label
+        >
+        <input
+          type="text"
+          id="position"
+          name="position"
+          placeholder="Job title"
+          required
+          class="rounded-lg border border-gray-700 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-white placeholder-gray-400 transition"
+        />
+      </div>
 
-  <!-- Email -->
-  <div class="form-group">
-    <label class="forml" for="email">Email *</label>
-    <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required />
-  </div>
+      <!-- Resume Upload (Google Drive Link) -->
+      <div class="flex flex-col gap-1">
+        <label for="resume" class="font-medium text-gray-200 mb-1"
+          >Resume (Upload to Google Drive &amp; Paste Link)
+          <span class="text-blue-500">*</span></label
+        >
+        <input
+          type="url"
+          id="resume"
+          name="resume"
+          placeholder="Paste Google Drive link here"
+          required
+          class="rounded-lg border border-gray-700 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-white placeholder-gray-400 transition"
+        />
+      </div>
 
-  <!-- Phone -->
-  <div class="form-group">
-    <label class="forml" for="phone">Phone Number *</label>
-    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Your phone number" required />
-  </div>
+      <!-- Cover Letter -->
+      <div class="flex flex-col gap-1">
+        <label for="message" class="font-medium text-gray-200 mb-1"
+          >Cover Letter</label
+        >
+        <textarea
+          id="message"
+          name="Cover Letter"
+          rows="4"
+          placeholder="Write a short cover letter"
+          class="rounded-lg border border-gray-700 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-800 text-white placeholder-gray-400 resize-none transition"
+        ></textarea>
+      </div>
 
-  <!-- Position -->
-  <div class="form-group">
-    <label class="forml" for="position">Position Applied For *</label>
-    <input type="text" id="position" name="position" class="form-input" placeholder="Job title" required />
-  </div>
+      <!-- Honeypot Spam Protection -->
+      <input
+        type="checkbox"
+        name="botcheck"
+        class="hidden"
+        style="display: none"
+      />
 
-  <!-- Resume Upload 
-   <div class="form-group">
-    <label class="forml" for="resume">Upload Resume *</label>
-    <input type="file" id="resume" name="resume" class="form-input" accept=".pdf,.doc,.docx" required />
-  </div>-->
-  <div class="form-group">
-    <label class="forml" for="resume">Resume (Upload to Google Drive & Paste Link) *</label>
-    <input type="url" id="resume" name="resume" class="form-input" placeholder="Paste Google Drive link here" required />
-  </div>
-  
-  
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="w-full mt-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-lg transition transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      >
+        Submit Application
+      </button>
+    </form>
 
-  <!-- Cover Letter -->
-  <div class="form-group">
-    <label class="forml" for="message">Cover Letter</label>
-    <textarea id="message" name="Cover Letter" rows="4" class="form-input" placeholder="Write a short cover letter"></textarea>
-  </div>
-
-  <!-- Honeypot Spam Protection -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-  <!-- Submit Button -->
-  <button type="submit" class="form-button">Submit Application</button>
-</form>
-
-
-<!--<section id="openings" class="current-openings">
+    <!--<section id="openings" class="current-openings">
     <h2 class="heaaa">Current Job Openings</h2>
     <div id="job-listings"></div>
 </section>-->
 
-<section id="culture" class="work-culture">
-    <h2 class="heaaa">Our Work Culture</h2>
-    <div class="culture-grid">
-        <div class="culture-item">
-            <i class="fas fa-lightbulb"></i>
-            <h3>Innovation</h3>
-            <p>Encouraging creativity and new ideas to stay ahead in the fast-evolving IT landscape.</p>
-        </div>
-        <div class="culture-item">
-            <i class="fas fa-users"></i>
-            <h3>Collaboration</h3>
-            <p>Promoting teamwork and open communication to achieve shared goals.</p>
-        </div>
-        
-        <div class="culture-item">
-            <i class="fas fa-chart-line"></i>
-            <h3>Growth</h3>
-            <p>Providing continuous learning opportunities and career development pathways.</p>
-        </div>
-        <div class="culture-item">
-            <i class="fas fa-balance-scale"></i>
-            <h3>Work-Life Balance</h3>
-            <p>Offering flexible work arrangements and wellness programs to ensure employee well-being.</p>
-        </div>
-        <!--<div class="culture-item">
-            <i class="fas fa-globe"></i>
-            <h3>Diversity & Inclusion</h3>
-            <p>Celebrating diverse perspectives and fostering an inclusive environment for all.</p>
-        </div>-->
-    </div>
-</section>
+    <section id="culture" class="py-16 bg-gray-900 text-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+          Our Work Culture
+        </h2>
 
-<section id="testimonials" class="testimonials">
-  <h2 class="heaaa">Employee Testimonials</h2>
-  <div class="testimonial-wrapper">
-    <button class="scroll-btn left" onclick="scrollTestimonials(-1)"><i class="fas fa-chevron-left"></i></button>
-    <div class="testimonial-container" id="testimonial-container">
-      <div class="testimonial-card">
-        <p>"Working at JAES Solutions has been an incredible experience. The supportive team environment and opportunities for professional growth have helped me excel in my career."</p>
-        <div class="employee-info">
-          <img src="assets/person1.jpg" alt="Employee Photo" />
-          <div>
-            <strong>Sangeetha Luke</strong><br />
-            <span>Software Developer</span><br />
-            <div class="star-rating">
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-</div>
-            <a href="https://www.linkedin.com/in/sangeethaluke/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Innovation -->
+          <div
+            class="flex flex-col items-center text-center bg-gray-800 rounded-2xl p-6 hover:scale-105 transition transform shadow-lg"
+          >
+            <i class="fas fa-lightbulb text-blue-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Innovation</h3>
+            <p class="text-gray-300">
+              Encouraging creativity and new ideas to stay ahead in the
+              fast-evolving IT landscape.
+            </p>
+          </div>
+
+          <!-- Collaboration -->
+          <div
+            class="flex flex-col items-center text-center bg-gray-800 rounded-2xl p-6 hover:scale-105 transition transform shadow-lg"
+          >
+            <i class="fas fa-users text-blue-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Collaboration</h3>
+            <p class="text-gray-300">
+              Promoting teamwork and open communication to achieve shared goals.
+            </p>
+          </div>
+
+          <!-- Growth -->
+          <div
+            class="flex flex-col items-center text-center bg-gray-800 rounded-2xl p-6 hover:scale-105 transition transform shadow-lg"
+          >
+            <i class="fas fa-chart-line text-blue-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Growth</h3>
+            <p class="text-gray-300">
+              Providing continuous learning opportunities and career development
+              pathways.
+            </p>
+          </div>
+
+          <!-- Work-Life Balance -->
+          <div
+            class="flex flex-col items-center text-center bg-gray-800 rounded-2xl p-6 hover:scale-105 transition transform shadow-lg"
+          >
+            <i class="fas fa-balance-scale text-blue-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Work-Life Balance</h3>
+            <p class="text-gray-300">
+              Offering flexible work arrangements and wellness programs to
+              ensure employee well-being.
+            </p>
           </div>
         </div>
       </div>
-      <div class="testimonial-card">
-        <p>"I love how JAES Solutions prioritizes innovation and employee well-being. The flexible work culture allows me to maintain a healthy work-life balance."</p>
-        <div class="employee-info">
-          <img src="assets/person2.jpg" alt="Employee Photo" />
-          <div>
-            <strong>Ajneetha Inti</strong><br />
-            <span>Digital Marketer</span><br />
-            <div class="star-rating">
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-</div>
-            <a href="https://www.linkedin.com/in/ajneetha/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </section>
+    <section id="testimonials" class="py-16 bg-black relative">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+          Employee Testimonials
+        </h2>
+        <!-- Left Arrow Button -->
+        <button
+          type="button"
+          class="hidden md:inline-flex min-w-0 items-center justify-center absolute z-20 left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-blue-500 text-white shadow-lg transition duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          aria-label="Scroll testimonials left"
+          onclick="scrollTestimonials('testimonial-container', -350)"
+        >
+          <i class="fas fa-chevron-left text-2xl"></i>
+        </button>
+        <!-- Testimonial Scroll Container -->
+        <div id="testimonial-container" class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-4 md:pb-8 scroll-smooth">
+            <!-- Testimonial 1 -->
+            <div
+              class="bg-gray-800 w-80 md:w-96 flex-shrink-0 px-6 py-6 rounded-2xl shadow-xl flex flex-col items-center text-center transition transform hover:scale-105 duration-300 group snap-start"
+            >
+              <img
+                src="assets/person1.jpg"
+                alt="Employee Photo"
+                class="w-16 h-16 rounded-full mb-2 border-4 border-blue-500 shadow-lg object-cover"
+              />
+              <div class="flex items-center justify-center mb-1">
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+              </div>
+              <p class="text-gray-100 mb-2 text-base">
+                "At JAES, I’ve grown both professionally and personally. Every
+                day, I am empowered to innovate, tackle new challenges, and see my
+                ideas come to life in ways I never imagined."
+              </p>
+              <div>
+                <div class="text-base font-semibold text-blue-400">
+                  Sangeetha Luke
+                </div>
+                <div class="text-xs text-gray-300 mb-1">Software Developer</div>
+                <a
+                  href="https://www.linkedin.com/in/sangeethaluke/"
+                  target="_blank"
+                  class="inline-block text-blue-400 hover:text-blue-300 transition"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Testimonial 2 -->
+            <div
+              class="bg-gray-800 w-80 md:w-96 flex-shrink-0 px-6 py-6 rounded-2xl shadow-xl flex flex-col items-center text-center transition transform hover:scale-105 duration-300 group snap-start"
+            >
+              <img
+                src="assets/person2.jpg"
+                alt="Employee Photo"
+                class="w-16 h-16 rounded-full mb-2 border-4 border-blue-500 shadow-lg object-cover"
+              />
+              <div class="flex items-center justify-center mb-1">
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+              </div>
+              <p class="text-gray-100 mb-2 text-base">
+                "Being part of JAES means collaborating with passionate people who
+                inspire me every day. Here, innovation isn’t just encouraged—it’s
+                celebrated, and every voice truly matters."
+              </p>
+              <div>
+                <div class="text-base font-semibold text-blue-400">
+                  Ajneetha Inti
+                </div>
+                <div class="text-xs text-gray-300 mb-1">Digital Marketer</div>
+                <a
+                  href="https://www.linkedin.com/in/ajneetha/"
+                  target="_blank"
+                  class="inline-block text-blue-400 hover:text-blue-300 transition"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Testimonial 3 -->
+            <div
+              class="bg-gray-800 w-80 md:w-96 flex-shrink-0 px-6 py-6 rounded-2xl shadow-xl flex flex-col items-center text-center transition transform hover:scale-105 duration-300 group snap-start"
+            >
+              <img
+                src="assets/person3.jpg"
+                alt="Employee Photo"
+                class="w-16 h-16 rounded-full mb-2 border-4 border-blue-500 shadow-lg object-cover"
+              />
+              <div class="flex items-center justify-center mb-1">
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+              </div>
+              <p class="text-gray-100 mb-2 text-base">
+                "JAES is where I discovered my true potential. The culture of
+                continuous learning and the chance to make a real impact on
+                projects keeps me motivated every single day."
+              </p>
+              <div>
+                <div class="text-base font-semibold text-blue-400">
+                  Sugeeth Chinta
+                </div>
+                <div class="text-xs text-gray-300 mb-1">QA Developer</div>
+                <a
+                  href="https://www.linkedin.com/in/sugeeth-c-139002254/"
+                  target="_blank"
+                  class="inline-block text-blue-400 hover:text-blue-300 transition"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+              </div>
+            </div>
+            <!-- Testimonial 4 -->
+            <div
+              class="bg-gray-800 w-80 md:w-96 flex-shrink-0 px-6 py-6 rounded-2xl shadow-xl flex flex-col items-center text-center transition transform hover:scale-105 duration-300 group snap-start"
+            >
+              <img
+                src="assets/person3.jpg"
+                alt="Employee Photo"
+                class="w-16 h-16 rounded-full mb-2 border-4 border-blue-500 shadow-lg object-cover"
+              />
+              <div class="flex items-center justify-center mb-1">
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+                <i class="fas fa-star text-blue-400"></i>
+              </div>
+              <p class="text-gray-100 mb-2 text-base">
+                "What excites me most about JAES is the sense of purpose—knowing
+                our work makes a difference. Here, creativity flourishes and every
+                project is a chance to drive real change."
+              </p>
+              <div>
+                <div class="text-base font-semibold text-blue-400">
+                  Jayden Murala
+                </div>
+                <div class="text-xs text-gray-300 mb-1">Multimedia Designer</div>
+                <a
+                  href="https://www.linkedin.com/in/sugeeth-c-139002254/"
+                  target="_blank"
+                  class="inline-block text-blue-400 hover:text-blue-300 transition"
+                >
+                  <i class="fab fa-linkedin text-xl"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+        <!-- Right Arrow Button -->
+        <button
+          type="button"
+          class="hidden md:inline-flex min-w-0 items-center justify-center absolute z-20 right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-gray-800/80 hover:bg-blue-500 text-white shadow-lg transition duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          aria-label="Scroll testimonials right"
+          onclick="scrollTestimonials('testimonial-container', 350)"
+        >
+          <i class="fas fa-chevron-right text-2xl"></i>
+        </button>
       </div>
-      <div class="testimonial-card">
-        <p>"JAES Solutions has given me the platform to explore my potential and take on exciting challenges. The leadership team truly values employee contributions."</p>
-        <div class="employee-info">
-          <img src="assets/person3.jpg" alt="Employee Photo" />
-          <div>
-            <strong>Sugeeth Chinta</strong><br />
-            <span>QA Developer</span><br />
-            <div class="star-rating">
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-</div>
-            <a href="https://www.linkedin.com/in/sugeeth-c-139002254/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
+    </section>
 
-      <div class="testimonial-card">
-        <p>"JAES Solutions has given me the platform to explore my potential and take on exciting challenges. The leadership team truly values employee contributions."</p>
-        <div class="employee-info">
-          <img src="assets/person3.jpg" alt="Employee Photo" />
-          <div>
-            <strong>Sugeeth Chinta</strong><br />
-            <span>QA Developer</span><br />
-            <div class="star-rating">
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-  <i class="fas fa-star"></i>
-</div>
-            <a href="https://www.linkedin.com/in/sugeeth-c-139002254/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const jobListings = [
+          {
+            title: "Data Scientist",
+            location: "San Francisco, USA",
+            description: "Analyze big data for insights.",
+          },
+        ];
 
-    
-    <button class="scroll-btn right" onclick="scrollTestimonials(1)"><i class="fas fa-chevron-right"></i></button>
-  </div>
-</section>
+        const jobContainer = document.getElementById("job-listings");
 
-
-
-
-
-<script> 
-document.addEventListener("DOMContentLoaded", function () {
-    const jobListings = [
-        { title: "Data Scientist", location: "San Francisco, USA", description: "Analyze big data for insights." }
-    ];
-
-    const jobContainer = document.getElementById("job-listings");
-
-    jobListings.forEach(job => {
-        const jobElement = document.createElement("div");
-        jobElement.classList.add("job");
-        jobElement.innerHTML = `
+        jobListings.forEach((job) => {
+          const jobElement = document.createElement("div");
+          jobElement.classList.add("job");
+          jobElement.innerHTML = `
             <h3>${job.title}</h3>
             <p><strong>Location:</strong> ${job.location}</p>
             <p>${job.description}</p>
         `;
-        jobContainer.appendChild(jobElement);
-    });
-});
+          jobContainer.appendChild(jobElement);
+        });
+      });
 
+      //button
 
-//button 
-
-function scrollTestimonials(direction) {
-    const container = document.getElementById('testimonial-container');
-    const scrollAmount = 340;
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-</script>
-<div id="footer-placeholder"></div>
-</body>
+      function scrollTestimonials(rowId, scrollAmount) {
+        const row = document.getElementById(rowId);
+        row.scrollBy({
+          left: scrollAmount,
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <div id="footer-placeholder"></div>
+  </body>
 </html>

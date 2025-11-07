@@ -214,7 +214,63 @@
     }
 
     requestAnimationFrame(render);
- 
+
+  // Set a cookie
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days*24*60*60*1000);
+    document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+  }
+
+  // Get a cookie
+  function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i=0;i<ca.length;i++) {
+      let c = ca[i].trim();
+      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+  }
+
+  const banner = document.getElementById("cookie-banner");
+
+  // Hide banner if consent already exists
+  if(getCookie("cookiesAccepted") === "true" || getCookie("cookiesAccepted") === "false") {
+    banner.style.display = "none";
+  }
+
+  // Accept button
+  document.getElementById("accept-cookies").addEventListener("click", function() {
+    setCookie("cookiesAccepted", "true", 365); // store acceptance for 1 year
+    banner.style.display = "none";
+
+    // Example: Load analytics scripts after consent
+    // loadAnalytics();
+  });
+
+  // Reject button
+  document.getElementById("reject-cookies").addEventListener("click", function() {
+    setCookie("cookiesAccepted", "false", 365); // store rejection for 1 year
+    banner.style.display = "none";
+  });
+
+  // Optional: Function to load analytics after acceptance
+  function loadAnalytics() {
+    // Google Analytics example
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'G-LYDJ4DEB0S', 'auto');
+    ga('send', 'pageview');
+  }
+
+  // Auto load analytics if previously accepted
+  if(getCookie("cookiesAccepted") === "true") {
+    loadAnalytics();
+  }
+
 //index js 
 //aos
 AOS.init({
@@ -261,12 +317,63 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch(error => console.error("Footer load error:", error));
   });
+  // Video player controls
+document.addEventListener("DOMContentLoaded", () => {
+  // Desktop and mobile hero video controls
+  const heroDesktopVideo = document.querySelector("section:first-of-type video.hidden.md\\:block");
+  const heroMobileVideo = document.querySelector("section:first-of-type video.block.md\\:hidden");
+  const heroVideo = window.innerWidth < 768 ? heroMobileVideo : heroDesktopVideo;
+
+  // Buttons in the hero section
+  const heroButtons = document.querySelectorAll("section:first-of-type a + span"); // your span wrapper around button img
+  // If you want separate play/mute buttons, assign unique classes or IDs
+
+  // Example: toggle play/pause for hero video
+  if (heroVideo) {
+    heroVideo.muted = false; // optional, unmute by default
+  }
+
+  // Video section with controls
+  const videoSection = document.querySelector("section.bg-gradient-to-t");
+  if (videoSection) {
+    const desktopVideo = videoSection.querySelector("video.hidden.md\\:block");
+    const mobileVideo = videoSection.querySelector("video.block.md\\:hidden");
+    const video = window.innerWidth < 768 ? mobileVideo : desktopVideo;
+
+    const buttons = videoSection.querySelectorAll("div > button");
+    const playPauseButton = buttons[0];
+    const muteButton = buttons[1];
+
+    // Replace with dynamic icon toggle logic
+    if (video && playPauseButton && muteButton) {
+      playPauseButton.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          playPauseButton.querySelector("img").src = "assets/pause.png";
+        } else {
+          video.pause();
+          playPauseButton.querySelector("img").src = "assets/play.png";
+        }
+      });
+
+      muteButton.addEventListener("click", () => {
+        video.muted = !video.muted;
+        muteButton.querySelector("img").src = video.muted ? "assets/volume.png" : "assets/unmute.png";
+      });
+    }
+  }
+
+
+});
+
+
+
   
 // Parallax scroll text effect
 window.addEventListener('scroll', () => {
   const innovate = document.getElementById('innovate');
   const lead = document.getElementById('lead');
-  const section = document.querySelector('.parallax');
+  const section = document.querySelector('.parallax, [style*="net.mp4"]'); // supports both old/new
   const sectionTop = section.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
   const scrollFactor = Math.min(1, (windowHeight - sectionTop) / windowHeight);
@@ -321,31 +428,5 @@ button.addEventListener('mouseleave', () => {
   circle.style.opacity = '1';
 });
 
-// Video player controls
-const video = window.innerWidth <= 768 
-  ? document.getElementById("myVideoMobile") 
-  : document.getElementById("myVideo");
 
-const playPauseBtn = document.getElementById("playPauseBtn");
-const muteUnmuteBtn = document.getElementById("muteUnmuteBtn");
-const playPauseIcon = document.getElementById("playPauseIcon");
-const muteUnmuteIcon = document.getElementById("muteUnmuteIcon");
-
-playPauseBtn.addEventListener("click", () => {
-  if (video.paused) {
-    video.play();
-    playPauseIcon.src = "assets/pause.png";
-  } else {
-    video.pause();
-    playPauseIcon.src = "assets/play.png";
-  }
-});
-
-muteUnmuteBtn.addEventListener("click", () => {
-  video.muted = !video.muted;
-  muteUnmuteIcon.src = video.muted 
-    ? "assets/volume.png"
-    : "assets/unmute.png";
-});
-
-
+  

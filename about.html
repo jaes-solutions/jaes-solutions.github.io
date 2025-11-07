@@ -1,49 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <script src="script.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About JAES Solutions | Trusted IT & Software Experts</title>
-    <link rel="stylesheet" href="about.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="description"
-      content="Learn more about JAES Solutions – your trusted partner in IT, app, web development, and hardware services."
-    />
-    <meta
-      name="keywords"
-      content="About JAES Solutions, IT Company, App Development, Web Development, IT Hardware, Tech Company, Digital Solutions, Technology Partner"
-    />
-    <meta name="author" content="JAES Solutions" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="About Us | JAES Solutions" />
-    <meta
-      property="og:description"
-      content="JAES Solutions empowers businesses through expert IT solutions, application development, and reliable hardware services."
-    />
-    <meta
-      property="og:image"
-      content="https://jaessolutions.com/assets/jaes.png"
-    />
-    <meta property="og:url" content="https://jaessolutions.com/about.html" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About Us | JAES Solutions" />
-    <meta
-      name="twitter:description"
-      content="Discover how JAES Solutions drives digital growth and transformation through IT services and custom solutions."
-    />
-    <meta
-      name="twitter:image"
-      content="https://jaessolutions.com/assets/jaes.png"
-    />
+    <link rel="stylesheet" href="about.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <style>
+      /* Custom scrollbar for horizontal scroll */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-black text-white font-poppins antialiased">
     <div id="navbar-placeholder"></div>
 
     <script>
@@ -84,7 +68,6 @@
             console.error("Error loading navbar:", error);
           });
       });
-
       //footer
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -95,6 +78,7 @@
           })
           .catch((error) => console.error("Footer load error:", error));
       });
+
       // Get the navbar element
       const navbar = document.getElementById("navbar");
 
@@ -113,90 +97,575 @@
         menu.classList.toggle("hidden");
       }
     </script>
-
-    <div class="video-container">
-      <video autoplay loop muted>
+    <!-- Hero Section -->
+    <section class="relative h-screen w-full overflow-hidden">
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="assets/hero-poster.jpg"
+      >
         <source src="assets/we.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-    </div>
-    <div class="hero">
-      <div class="overlay">
-        <div
-          class="content-box"
-          data-aos="fade"
-          data-aos-offset="100"
-          data-aos-duration="1000"
-          data-aos-anchor-placement="top-center"
+      <div
+        class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center px-6 text-center"
+      >
+        <h1
+          class="text-white text-4xl md:text-6xl font-extrabold max-w-4xl mb-6 leading-tight"
+          data-aos="fade-down"
         >
-          <h1>Innovate. Transform. Lead.</h1>
-          <p>
-            At JAES Solutions, we deliver smart, reliable IT solutions that help
-            businesses<br />
-            grow in the digital age. From custom app development to IT services
-            and<br />
-            hardware support, we tailor every solution to fit your unique needs.
+          Innovate. Transform. Lead.
+        </h1>
+        <p
+          class="text-gray-300 text-lg md:text-xl max-w-3xl mb-10 leading-relaxed"
+          data-aos="fade-up"
+        >
+          At JAES Solutions, we deliver smart, reliable IT solutions that help
+          businesses grow in the digital age. From custom app development to IT
+          services and hardware support, we tailor every solution to fit your
+          unique needs.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-flex w-fit items-center gap-[10px] px-[18px] py-[10px] border border-white rounded-full text-white bg-transparent font-semibold text-[15px] no-underline transition-all duration-300 ease-in-out hover:bg-[#42cdf6] hover:text-black hover:border-white relative overflow-hidden justify-center"
+        >
+          <span class="flex items-center">
+            Talk to an Expert
+            <span
+              class="bg-white rounded-full p-2 flex items-center justify-center transition-colors duration-300 ease-in-out hover:bg-[#b6fffa] ml-2"
+            >
+              <img
+                src="assets/arrow.png"
+                alt="Arrow Icon"
+                class="w-4 h-4 object-contain transition-transform duration-300 ease-in-out group-hover:translate-x-[2px]"
+              />
+            </span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section
+      class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center"
+    >
+      <div data-aos="fade-right" class="text-left">
+        <h2 class="text-3xl font-bold mb-6 text-white">Who We Are</h2>
+        <p class="text-gray-200 leading-relaxed mb-4">
+          JAES Solutions is a forward-thinking IT and software company dedicated
+          to empowering businesses worldwide. We combine deep technical
+          expertise with innovative thinking to deliver solutions that drive
+          growth and efficiency.
+        </p>
+        <p class="text-gray-200 leading-relaxed">
+          Our team of passionate professionals works closely with clients to
+          understand their unique challenges and craft tailored strategies that
+          make a real impact.
+        </p>
+      </div>
+      <div
+        class="rounded-lg overflow-hidden shadow-lg"
+        data-aos="fade-left"
+        aria-label="Who we are image placeholder"
+      >
+        <video
+          src="assets/JAES video (1).mp4"
+          controls
+          class="w-full h-auto rounded-lg"
+          poster="assets/who-we-are-poster.jpg"
+          aria-hidden="true"
+        >
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
+    </section>
+
+    <!-- Mission, Vision -->
+    <section
+      class="bg-gradient-to-b from-[#0f172a] to-[#1e293b] py-20 px-6 w-full"
+    >
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center mb-4 text-white"
+        data-aos="fade-up"
+      >
+        Our Foundation
+      </h2>
+      <div class="h-1 w-24 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <!-- Mission Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 group"
+          aria-labelledby="mission-title"
+        >
+          <div class="mb-6">
+            <span
+              class="inline-block text-5xl text-blue-500 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(59,130,246,0.8)]"
+            >
+              <i class="fas fa-bullseye" aria-hidden="true"></i>
+            </span>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" id="mission-title">
+            Our Mission
+          </h3>
+          <p class="text-gray-300 leading-relaxed text-base md:text-lg">
+            Empower businesses with transformative IT solutions that enhance
+            efficiency, drive innovation, and ensure seamless digital
+            experiences.
           </p>
         </div>
-        <button
-          onclick="bookConsult()"
-          class="but"
-          data-aos="fade-down"
-          data-aos-offset="100"
-          data-aos-duration="1000"
+        <!-- Vision Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-xl p-10 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 group"
+          aria-labelledby="vision-title"
         >
-          GET IN TOUCH
-        </button>
+          <div class="mb-6">
+            <span
+              class="inline-block text-5xl text-green-400 drop-shadow-[0_0_10px_rgba(34,197,94,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_20px_rgba(34,197,94,0.8)]"
+            >
+              <i class="fas fa-eye" aria-hidden="true"></i>
+            </span>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-white" id="vision-title">
+            Our Vision
+          </h3>
+          <p class="text-gray-300 leading-relaxed text-base md:text-lg">
+            To be a global leader in IT solutions, recognized for innovation,
+            quality, and customer success, enabling businesses to unlock their
+            full potential.
+          </p>
+        </div>
       </div>
-    </div>
-
-    <script>
-      function bookConsult() {
-        window.location.href = "contact.html";
-      }
-    </script>
-    <section class="abs">
-      <section class="mission">
-        <h2 class="hetch">Our Mission</h2>
-        <p class="pee">
-          Our mission is to empower businesses with transformative IT solutions
-          that enhance efficiency, drive innovation, and ensure seamless digital
-          experiences. We are committed to delivering top-notch technology
-          services that help our clients achieve their goals with confidence and
-          ease.
-        </p>
-      </section>
-      <section class="vision">
-        <h2 class="hetch">Our Vision</h2>
-        <p class="pee">
-          Our vision is to be a global leader in IT solutions, recognized for
-          our commitment to innovation, quality, and customer success. We strive
-          to create a future where businesses of all sizes can harness the power
-          of technology to unlock their full potential and achieve sustainable
-          growth.
-        </p>
-      </section>
-      <section class="why-choose">
-        <h2 class="hetch">Why Choose JAES Solutions?</h2>
-        <ul class="tech-float">
-          <li>Expertise across a wide range of IT domains</li>
-          <li>Tailored solutions that align with your business needs</li>
-          <li>Commitment to quality, innovation, and customer satisfaction</li>
-          <li>A passionate team of technology experts</li>
-        </ul>
-      </section>
     </section>
-    <!--<header>
-        <h1>About Us</h1>
-    </header>
-    <main>
-        
-    </main>-->
+
+    <!-- What We Do / Services -->
+    <section
+      class="bg-gradient-to-b from-[#1e293b] to-[#0f172a] py-20 px-6 w-full"
+    >
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center mb-4 text-white"
+        data-aos="fade-up"
+      >
+        What We Do
+      </h2>
+      <div class="h-1 w-24 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <!-- App Development Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+          aria-labelledby="service-appdev"
+        >
+          <div class="mb-6">
+            <span
+              class="inline-block text-5xl text-blue-400 drop-shadow-[0_0_12px_rgba(59,130,246,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_24px_rgba(59,130,246,0.8)]"
+            >
+              <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+          <h3
+            class="text-2xl font-semibold mb-3 text-white"
+            id="service-appdev"
+          >
+            App Development
+          </h3>
+          <p class="text-gray-300 mb-6">
+            Custom mobile and web applications tailored to your business needs,
+            designed for performance and scalability.
+          </p>
+          <a
+            href="services.html#app-development"
+            class="mt-4 inline-block text-sm font-semibold text-blue-400 hover:text-white hover:underline transition"
+            >Learn More &rarr;</a
+          >
+        </div>
+        <!-- IT Services Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+          aria-labelledby="service-itservices"
+        >
+          <div class="mb-6">
+            <span
+              class="inline-block text-5xl text-green-400 drop-shadow-[0_0_12px_rgba(34,197,94,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_24px_rgba(34,197,94,0.8)]"
+            >
+              <i class="fas fa-server" aria-hidden="true"></i>
+            </span>
+          </div>
+          <h3
+            class="text-2xl font-semibold mb-3 text-white"
+            id="service-itservices"
+          >
+            IT Services
+          </h3>
+          <p class="text-gray-300 mb-6">
+            Comprehensive IT support, network management, and cloud services to
+            keep your business running smoothly.
+          </p>
+          <a
+            href="services.html#it-services"
+            class="mt-4 inline-block text-sm font-semibold text-blue-400 hover:text-white hover:underline transition"
+            >Learn More &rarr;</a
+          >
+        </div>
+        <!-- Hardware Support Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 p-10 rounded-2xl shadow-lg flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+          aria-labelledby="service-hardware"
+        >
+          <div class="mb-6">
+            <span
+              class="inline-block text-5xl text-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_24px_rgba(168,85,247,0.8)]"
+            >
+              <i class="fas fa-desktop" aria-hidden="true"></i>
+            </span>
+          </div>
+          <h3
+            class="text-2xl font-semibold mb-3 text-white"
+            id="service-hardware"
+          >
+            Hardware Support
+          </h3>
+          <p class="text-gray-300 mb-6">
+            Reliable hardware procurement, installation, and maintenance
+            services to support your IT infrastructure.
+          </p>
+          <a
+            href="services.html#hardware-support"
+            class="mt-4 inline-block text-sm font-semibold text-blue-400 hover:text-white hover:underline transition"
+            >Learn More &rarr;</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Work Culture / Values (Redesigned) -->
+    <section class="bg-black py-20 px-6 w-full">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center mb-4 text-white"
+        data-aos="fade-up"
+      >
+        Our Work Culture &amp; Values
+      </h2>
+      <div class="h-1 w-24 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <!-- Collaboration Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+        >
+          <div
+            class="text-5xl mb-4 text-blue-400 drop-shadow-[0_0_12px_rgba(59,130,246,0.7)]"
+          >
+            <i class="fas fa-users" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Collaboration</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            We foster teamwork and open communication to achieve common goals.
+          </p>
+        </div>
+        <!-- Innovation Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+        >
+          <div
+            class="text-5xl mb-4 text-green-400 drop-shadow-[0_0_12px_rgba(34,197,94,0.7)]"
+          >
+            <i class="fas fa-lightbulb" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Innovation</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Encouraging creativity and embracing new technologies to stay ahead.
+          </p>
+        </div>
+        <!-- Integrity Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+        >
+          <div
+            class="text-5xl mb-4 text-purple-400 drop-shadow-[0_0_12px_rgba(168,85,247,0.7)]"
+          >
+            <i class="fas fa-handshake" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Integrity</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Upholding honesty, transparency, and accountability in all we do.
+          </p>
+        </div>
+        <!-- Passion Card -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 group"
+        >
+          <div
+            class="text-5xl mb-4 text-yellow-400 drop-shadow-[0_0_12px_rgba(250,204,21,0.7)]"
+          >
+            <i class="fas fa-heart" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-2">Passion</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Driven by a passion for technology and customer success.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership / Team (Redesigned) -->
+    <section class="bg-black py-20 px-6 w-full" aria-label="Leadership Team">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center mb-4 text-white"
+        data-aos="fade-up"
+      >
+        Leadership Team
+      </h2>
+      <div class="h-1 w-24 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+      <p
+        class="text-gray-200 max-w-3xl mx-auto mb-12 text-center"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Meet the visionary leaders who guide JAES Solutions with expertise and
+        passion.
+      </p>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 max-w-6xl mx-auto items-center justify-center text-center"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <!-- Leader 1 -->
+        <div
+          class="hover:scale-105 transition-transform duration-300 flex flex-col items-center"
+        >
+          <div
+            class="w-40 h-40 rounded-full bg-gradient-to-b from-blue-500 to-blue-700 flex items-center justify-center text-3xl font-bold text-white mb-4 select-none"
+          >
+            JL
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">Leader Name</h3>
+            <p class="text-gray-400 text-sm">Position</p>
+          </div>
+        </div>
+        <!-- Leader 2 -->
+        <div
+          class="hover:scale-105 transition-transform duration-300 flex flex-col items-center"
+        >
+          <div
+            class="w-40 h-40 rounded-full bg-gradient-to-b from-blue-500 to-blue-700 flex items-center justify-center text-3xl font-bold text-white mb-4 select-none"
+          >
+            AB
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">Leader Name</h3>
+            <p class="text-gray-400 text-sm">Position</p>
+          </div>
+        </div>
+        <!-- Leader 3 -->
+        <div
+          class="hover:scale-105 transition-transform duration-300 flex flex-col items-center"
+        >
+          <div
+            class="w-40 h-40 rounded-full bg-gradient-to-b from-blue-500 to-blue-700 flex items-center justify-center text-3xl font-bold text-white mb-4 select-none"
+          >
+            CD
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">Leader Name</h3>
+            <p class="text-gray-400 text-sm">Position</p>
+          </div>
+        </div>
+        <!-- Leader 4 -->
+        <div
+          class="hover:scale-105 transition-transform duration-300 flex flex-col items-center"
+        >
+          <div
+            class="w-40 h-40 rounded-full bg-gradient-to-b from-blue-500 to-blue-700 flex items-center justify-center text-3xl font-bold text-white mb-4 select-none"
+          >
+            EF
+          </div>
+          <div>
+            <h3 class="font-semibold text-lg text-white mb-1">Leader Name</h3>
+            <p class="text-gray-400 text-sm">Position</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations / Global Presence (Placeholder) 
+    <section class="bg-gray-50 py-16 px-6 max-w-7xl mx-auto text-center" aria-label="Global Locations">
+      <h2 class="text-3xl font-bold mb-8 text-black" data-aos="fade-up">Our Global Presence</h2>
+      <p class="text-gray-700 max-w-3xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">
+        JAES Solutions operates across multiple locations worldwide to serve our clients better.
+      </p>
+      <div
+        class="bg-white rounded-lg shadow-lg p-12 max-w-4xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div class="h-64 bg-gray-200 flex items-center justify-center text-gray-400 font-semibold text-xl select-none" aria-hidden="true">
+          Map / Locations Placeholder
+        </div>
+      </div>
+    </section>-->
+
+    <!-- Testimonials / Client Stories (Modernized) -->
+    <section class="bg-black py-20 px-6 w-full">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center mb-4 text-white"
+        data-aos="fade-up"
+      >
+        What Our Clients Say
+      </h2>
+      <div class="h-1 w-24 bg-blue-500 mx-auto mb-12 rounded-full"></div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        aria-label="Client testimonials"
+      >
+        <!-- Testimonial 1 -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-8 shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 flex flex-col items-center text-center"
+        >
+          <i class="fas fa-quote-left text-blue-500 text-3xl mb-4"></i>
+          <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "JAES Solutions transformed our digital capabilities with their
+            expert IT services and innovative solutions."
+          </p>
+          <footer class="text-sm font-semibold text-blue-400">
+            – Client Name, Company
+          </footer>
+        </div>
+        <!-- Testimonial 2 -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-8 shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 flex flex-col items-center text-center"
+        >
+          <i class="fas fa-quote-left text-blue-500 text-3xl mb-4"></i>
+          <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Their team’s professionalism and dedication made all the difference
+            in our app launch success."
+          </p>
+          <footer class="text-sm font-semibold text-blue-400">
+            – Client Name, Company
+          </footer>
+        </div>
+        <!-- Testimonial 3 -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-8 shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 flex flex-col items-center text-center"
+        >
+          <i class="fas fa-quote-left text-blue-500 text-3xl mb-4"></i>
+          <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "Reliable hardware support and IT management that keeps our business
+            running smoothly."
+          </p>
+          <footer class="text-sm font-semibold text-blue-400">
+            – Client Name, Company
+          </footer>
+        </div>
+        <!-- Testimonial 4 -->
+        <div
+          class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl p-8 shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300 flex flex-col items-center text-center"
+        >
+          <i class="fas fa-quote-left text-blue-500 text-3xl mb-4"></i>
+          <p class="text-gray-300 italic mb-4 leading-relaxed">
+            "JAES Solutions is a trusted partner that truly understands our
+            business needs."
+          </p>
+          <footer class="text-sm font-semibold text-blue-400">
+            – Client Name, Company
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section
+      class="bg-gradient-to-b from-black via-[#0f172a] to-black py-24 px-6 text-center text-white"
+      aria-label="Call to Action"
+      data-aos="fade-up"
+    >
+      <h2
+        class="text-4xl md:text-5xl font-extrabold max-w-3xl mx-auto mb-6 leading-tight"
+      >
+        Ready to Transform Your Business with
+        <span class="text-blue-500">JAES Solutions?</span>
+      </h2>
+      <p class="text-gray-300 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+        Contact us today to discuss how our IT expertise can help you innovate,
+        grow, and succeed.
+      </p>
+      <a
+        href="contact.html"
+        class="cta-glow-btn inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full py-3 px-10 shadow-lg hover:shadow-blue-500/40 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500"
+        >Get In Touch</a
+      >
+      <style>
+        .cta-glow-btn {
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+        }
+        .cta-glow-btn::before {
+          content: "";
+          position: absolute;
+          inset: -4px;
+          border-radius: 9999px;
+          background: linear-gradient(
+            90deg,
+            #2563eb 0%,
+            #60a5fa 50%,
+            #2563eb 100%
+          );
+          opacity: 0.5;
+          filter: blur(12px);
+          transition: opacity 0.3s, filter 0.3s;
+          z-index: -1;
+          pointer-events: none;
+        }
+        .cta-glow-btn:hover::before,
+        .cta-glow-btn:focus::before {
+          opacity: 1;
+          filter: blur(20px);
+          animation: cta-glow-animate 1.2s linear infinite;
+        }
+        @keyframes cta-glow-animate {
+          0% {
+            filter: blur(20px);
+            opacity: 1;
+          }
+          50% {
+            filter: blur(28px);
+            opacity: 0.8;
+          }
+          100% {
+            filter: blur(20px);
+            opacity: 1;
+          }
+        }
+      </style>
+    </section>
+
+    <!-- Footer -->
     <div id="footer-placeholder"></div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
-      AOS.init({
-        duration: 1000, // animation duration
-        once: true, // animation happens only once
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 800,
+          once: true,
+          easing: "ease-in-out",
+        });
       });
     </script>
   </body>

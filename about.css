@@ -137,7 +137,11 @@
     margin-top: 3px;
     margin-left: 65px;
 }
-
+.logo-container img {
+  max-width: none !important; /* prevents Tailwind from shrinking the image */
+  height: 150px !important; /* keeps fixed height */
+  width: auto !important; /* keeps proportions */
+}
 .logo-left,
 .logo-bottom {
     position: absolute;
@@ -371,7 +375,7 @@ color: #4299e6;
   }
   
   .menu-button {
-    background: none;
+    background: none !important;
     border: none;
     cursor: pointer;
   }
@@ -419,6 +423,9 @@ color: #4299e6;
       display: block;
     }
   }
+
+
+
 
 
 
@@ -722,7 +729,7 @@ main {
 
 /* Footer Container */
 .footer {
-  background-color: #111111;
+  background-color: black;
   color: #ffffff;
   padding: 60px 40px;
   display: flex;

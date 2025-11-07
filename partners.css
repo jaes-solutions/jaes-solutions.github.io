@@ -1,14 +1,5 @@
 /* General Styles */
-i{
-    position: absolute;
-    width: 4px;  /* Slightly larger for visibility */
-    height: 4px;
-    background: #4299e6;
-    pointer-events: none;
-    animation: animate 5s linear forwards;
-    border-radius: 50%;
-    box-shadow: 0 0 8px 4px #ffc9932e;
-  }
+
   
   @keyframes animate
   {
@@ -25,7 +16,7 @@ i{
     }
   }
   @media (max-width: 768px) {
-    html, body {
+    html {
       overflow-x: hidden;  /* Prevent horizontal scrolling */
       margin: 0;
       padding: 0;
@@ -41,6 +32,7 @@ i{
       overflow-x: hidden;
         scrollbar-width: none; /* For Firefox */
         -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        background-color: #000;
   }
     
     body::-webkit-scrollbar {
@@ -52,9 +44,9 @@ i{
   }
   
   .navbar.scrolled {
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.904);
     opacity: 0.9; /* Change to the color you want */
-    color: #fff; /* Text color if needed */
+    color: white; /* Text color if needed */
   }
   .relative {
     position: relative;
@@ -111,7 +103,7 @@ i{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
+    background-color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 50;
   }
@@ -143,8 +135,13 @@ i{
     height: 150px;
     display: block;
     margin-top: 3px;
+    margin-left: 65px;
 }
-
+.logo-container img {
+  max-width: none !important; /* prevents Tailwind from shrinking the image */
+  height: 150px !important; /* keeps fixed height */
+  width: auto !important; /* keeps proportions */
+}
 .logo-left,
 .logo-bottom {
     position: absolute;
@@ -155,15 +152,16 @@ i{
 
 /* Bottom Image */
 .logo-bottom {
-    left: 0%;
+    left: 65px;
     top: 100%;
-    margin-top: 20px;
+    margin-top: 23px;
+    transition: all 0.7s ease-in-out; 
 }
 
 /* Left Image */
 .logo-left {
-    left: -100%;
-    top: 0;
+    left: -10%;
+    top: 5px;
     margin-left: -50px;
 }
 
@@ -185,16 +183,18 @@ i{
   }
 }
 
+
   
   .nav-links {
     display: flex;
     gap: 2.5rem;
     margin-right: 330px;
     align-items: center;
+    
   }
   .nav-ser{
     gap: 1rem;
-    color: #333333;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
     display: flex;
@@ -230,7 +230,7 @@ i{
     top: 100%;
     left: -100px;
     width: 650px; /* Increased width */
-    background: white;
+    background: rgb(37, 37, 37);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.27);
     border-radius: 20px;
     display: flex;
@@ -257,10 +257,11 @@ i{
     margin-bottom: 10px;
     color: black;
     font-size: 17px;
-    margin-top: 20px;
+    
+    
   }
   .in{
-    color: black;
+    color: white;
     cursor: default;
     text-decoration: none;
   }
@@ -280,10 +281,11 @@ color: #4299e6;
     text-decoration: none;
     border-radius: 5px;
     margin: 5px 0;
+    color: white;
     transition: background 0.3s;
   }
   .dropdown-right a:hover {
-    background: #f8f8f8;
+    background: #2f2e2e;
     color: #4299e6;
   }
   
@@ -305,7 +307,7 @@ color: #4299e6;
   .service-content p {
     margin: 0;
     font-size: 14px;
-    color: #666;
+    color: #aaaaaa;
     text-align: left;
   }
   .dropdown-link {
@@ -318,7 +320,7 @@ color: #4299e6;
   }
 
   .dropdown-link:hover {
-    background: #f1f1f1;
+    background: #323232;
   }
 
   .dropdown-link i {
@@ -330,7 +332,6 @@ color: #4299e6;
     display: block;
     margin-top: 15px;
     text-align: left;
-    background: white;
     color:#4299e6;
     padding: 8px;
     border-radius: 5px;
@@ -341,11 +342,11 @@ color: #4299e6;
   }
 
   .partners-button:hover {
-    background: #f1f1f1;
+    background: #2f2e2e;
   }
-  
+
   .nav-link {
-    color: #333333;
+    color: white;
     text-decoration: none;
     transition: color 0.3s;
   }
@@ -422,6 +423,9 @@ color: #4299e6;
       display: block;
     }
   }
+
+
+
 
 
 

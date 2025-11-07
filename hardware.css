@@ -137,7 +137,11 @@
     margin-top: 3px;
     margin-left: 65px;
 }
-
+.logo-container img {
+  max-width: none !important; /* prevents Tailwind from shrinking the image */
+  height: 150px !important; /* keeps fixed height */
+  width: auto !important; /* keeps proportions */
+}
 .logo-left,
 .logo-bottom {
     position: absolute;
@@ -420,9 +424,10 @@ color: #4299e6;
     }
   }
 
-body{
-  font-family: 'Poppins', sans-serif;
-}
+
+
+
+
 /* Video Container with Blur */
 .video-background {
   position: fixed;

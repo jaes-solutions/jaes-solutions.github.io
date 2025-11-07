@@ -137,7 +137,11 @@
     margin-top: 3px;
     margin-left: 65px;
 }
-
+.logo-container img {
+  max-width: none !important; /* prevents Tailwind from shrinking the image */
+  height: 150px !important; /* keeps fixed height */
+  width: auto !important; /* keeps proportions */
+}
 .logo-left,
 .logo-bottom {
     position: absolute;
@@ -420,6 +424,11 @@ color: #4299e6;
     }
   }
 
+
+
+
+
+
  /* Video Container with Blur */
  .video-background {
   position: fixed;
@@ -468,28 +477,6 @@ color: #4299e6;
   z-index: -1;
 }
 /* styles.css */
-
-.contact-btn {
-  position:relative;
-  z-index: 1;
-  margin-top: -100px;
-  padding: 42px 94px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  background-color:#4299e6;
-  border: 2px solid #093b68;
-  border-radius: 80px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact-btn:hover {
-  background-color: white;
-  color: #4299e6;
-  transform: scale(1.1);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
 
 .content {
   padding: 20px;
